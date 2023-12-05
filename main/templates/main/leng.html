@@ -1,0 +1,11 @@
+{% load static %}
+{% load i18n %}
+
+<div style="display: none">
+    <form class="main_leng" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+        <select name="language">
+            <option value="ru"></option>
+        </select>
+        <button class="leng_butt" type="submit"></button>
+    </form>
+</div>

@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-07 13:54+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\company\templates\company\companyHome.html:31
+msgid "О нас"
+msgstr "About Us"
+
+#: .\company\templates\company\companyHome.html:33
+msgid ""
+"Путешествия - это возможность погрузиться в другую культуру, открыть новые "
+"горизонты и создать незабываемые воспоминания. А если вам нужна помощь в "
+"организации поездки, обратитесь в наше туристическое агентство “Crown Tour”! "
+"Мы - команда профессионалов, которые страстно любят свою работу. Наша "
+"главная цель - сделать ваше путешествие максимально комфортным и "
+"запоминающимся. Мы обладаем огромным опытом в туристической индустрии и "
+"всегда следим за новыми тенденциями и предложениями. Наше туристическое "
+"агентство предлагает широкий спектр услуг: оформление виз и страховок, "
+"подбор и бронирование оптимальных маршрутов, гостиниц, авиабилетов и "
+"трансферов. Наша команда всегда готова выслушать ваши пожелания и предложить "
+"варианты, которые соответствуют вашим предпочтениям и бюджету. Мы учтем все "
+"детали и подготовим для вас индивидуальный путеводитель, чтобы вы могли "
+"наслаждаться каждым моментом своего путешествия. Завтра необходимо "
+"отправиться в путешествие, но вы еще не подготовились? Не беда! Наше "
+"туристическое агентство предлагает экстренные услуги, чтобы вы могли решить "
+"все проблемы в кратчайшие сроки. Мы готовы помочь вам и в самых сложных "
+"ситуациях. Также \"Crown Tour\" оказывает различные визовые услуги для "
+"граждан Узбекистана, выезжающих в зарубеж."
+msgstr ""
+"To our Valued Guests Dear Friends, If you ever thought of visiting Uzbekistan or any other Central Asian country you might have heard about the history, culture, meals, hospitality, or other features inherent to these countries. But what do all these attributes really mean, especially to the foreigners? Throughout its history of thousands of years these lands have witnessed dramatic episodes of rise and fall like those of Achaemenid Empire, the greatest Empire of the ancient world, from its foundation in 6th century BC to its end from troops of Alexander the Great in 4th century BC. The further Greek-Macedonian influence enriched the region with Hellenistic culture. Fast forward over one thousand years we get to Samanid Empire with its center in Samarkand and Bukhara during which these cities and the rest part of the empire experienced an incredible scientific and cultural renaissance. It was during the rule of Samanid dynasty (819-1005) when such scholars, philosophers, poets, and polymaths as Abu Rayhon Beruniy, Abu Ali Ibn Sina (Avicenna), Omar Khayyam, Ferdowsi, Rudaki and many others lived and worked. They made immense contribution in the philosophical, scientific, and cultural aspects and are widely acknowledged worldwide even nowadays. Another remarkable yet tragic period of Uzbek history is the invasion of nomadic hordes of Chengiz Khan in 1220s with the destruction of major cities like Samarkand, Urgench and others when numerous objects of historical heritage were burnt and wiped out forever. Among those historical objects was the ancient city of Afrasiab (about 400 BC) which was located on the territory of modern Samarkand. The next important part was coming of Timur (Tamerlane) (1336-1405) into the historic stage who founded his empire with the capital in Samarkand. Under his rule Samarkand turned into a true capital of the great empire with its architectural and urbanistic development of the time. Most of Timur’s and later Timurids’ architectural legacy is well preserved until now. Of course, there were times of peace and prosperity when merchants would establish trade along caravan routes, the major overland transportation routes. The most stretched one of them was The Great Silk Road connecting China and surrounding area in the East with Europe and western part. The Central Asia and specifically Uzbekistan forms a very important crossroad of the Great Silk Road making it strategically perspective area. The modern Uzbekistan is a dynamically developing country just like its neighbor and brother countries: Tajikistan, Kazakhstan, Kyrgyzstan, and Turkmenistan. Our purpose is not retelling the entire history, geography, economy, or the political situation of the region as there are a lot of other competent resources on the net which can do this job way better than we could’ve ever done. We, at “Crown Tour”, are rather intended to do our best to make your visit enjoyable, unforgettable and informative at same time. Our goal is to make you, our esteemed guest, feel the combination of cultures and traditions in everything from meals to people’s hospitality. To make you feel, even for a moment, the glory of the Great Silk Road."
+
+#: .\company\templates\company\companyHome.html:36
+msgid "В наши услуги входят:"
+msgstr "Our services include:"
+
+#: .\company\templates\company\companyHome.html:37
+msgid "• Заполнение анкет для обращения за визой"
+msgstr "• Filling out visa application forms"
+
+#: .\company\templates\company\companyHome.html:38
+msgid "• Запись на очередь для собеседования"
+msgstr "• Sign up for an interview"
+
+#: .\company\templates\company\companyHome.html:39
+msgid "• Содействие в бронировании гостиницы (по требованию)"
+msgstr "• Assistance in hotel booking (on request)"
+
+#: .\company\templates\company\companyHome.html:40
+msgid "• Содействие в бронировании авиабилетов (по требованию)"
+msgstr "• Assistance in booking air tickets (on request)"
+
+#: .\company\templates\company\companyHome.html:41
+msgid "• Содействие в оформлении медицинской страховки (по требованию)"
+msgstr "• Assistance in obtaining medical insurance (on request)"
+
+#: .\company\templates\company\companyHome.html:44
+msgid "Наши контакты:"
+msgstr "Our contacts:"
+
+#: .\company\templates\company\companyHome.html:45
+msgid "+998 97 287 0404"
+msgstr "+998 97 287 0404"
+
+#: .\company\templates\company\companyHome.html:46
+msgid "info@krowntour.com "
+msgstr "info@krowntour.com "
+
+#: .\company\templates\company\companyHome.html:47
+msgid ""
+"Адрес: г. Самарканд, ул. Мирзо Улугбека 16А ориентир гостиница Регистон."
+msgstr ""
+"Address: Samarkand, st. Mirzo Ulugbek 16A landmark Registon Hotel."

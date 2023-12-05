@@ -1,0 +1,362 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load i18n %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'flights/scss/style.css' %}">
+{% endblock %}
+
+<!-- /////////////////////////////////////////// -->
+
+{% block title %}
+flights
+{% endblock %}
+
+<!-- ///////////////////////////////////////////////////// -->
+
+{% block content %}
+<div class="filter_modl">
+    <div class="block_left">
+        <div class="cloace" >
+            <img src="{% static 'flights/img/cloace.svg' %}" id="cloase" alt="">
+        </div>
+        <div class="block_sec1">
+            <h3>{% trans 'Пересадки' %}</h3>
+            <p class="btn_clear"><a href="" class="btn_clear" style="text-decoration: none;">{% trans 'Сбросить' %}</a></p>
+        </div>
+        <span class="chert"></span>
+        <div class="block_sec2">
+            <div>
+                <input type="checkbox" class="transfers" data-item="0" id="tt3">
+                <label for="tt3">
+                    <p>{% trans 'Без пересадок' %}</p>
+                    
+                </label>
+            </div>
+            <div>
+                <input type="checkbox" class="transfers" data-item="1" id="tt2">
+                <label for="tt2">
+                    <p>{% trans '1 пересадка' %}</p>
+                    
+                </label>
+            </div>
+            <div>
+                <input type="checkbox" class="transfers" data-item="2" id="tt1">
+                <label for="tt1">
+                    <p>{% trans '2 пересадки' %}</p>
+                    
+                </label>
+            </div>
+            <div>
+                <input type="checkbox" class="transfers" data-item="3" id="tt">
+                <label for="tt">
+                    <p>{% trans '3 пересадки' %}</p>
+                </label>
+                
+            </div>
+        </div>
+        <div class="block_sec3">
+            <p class="text">{% trans 'Длительность пересадок' %}</p>
+            <div class="btn_active" id="duration_btn">
+                <p class="block_sec3_text">{% trans 'До Зч' %}</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                    <circle cx="12.7163" cy="12.5005" r="12.4321" fill="#FDFDFD" />
+                </svg>
+            </div>
+        </div>
+        <div class="block_sec4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.4321" cy="12.4321" r="12.4321" fill="#0089D7" />
+                <circle cx="12.5" cy="12.5" r="9.5" fill="#FDFDFD" />
+            </svg>
+            <span></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                <circle cx="12.4321" cy="12.4321" r="12.4321" fill="#0089D7" />
+                <circle cx="12.5" cy="12.5" r="9.5" fill="#FDFDFD" />
+            </svg>
+            <div class="num1">4</div>
+            <div class="num2">8</div>
+            <div class="num3">12</div>
+        </div>
+        <div class="block_sec5">
+            <p>{% trans 'Если комфорт важнее' %}</p>
+        </div>
+        <span class="chert"></span>
+        <div class="block_sec6">
+            <div class="bl_0 block_sec6_1">
+                <p>{% trans 'Без смены аэропорта' %}</p>
+                <div>
+                    <div class="switch-btn"></div>
+                </div>
+            </div>
+            <div class="bl_0 block_sec6_2">
+                <p>{% trans 'Без ночных пересадок' %}</p>
+                <div>
+                    <div class="switch-btn "></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="sec1">
+    <div class="cont">
+        <form method="post" action="">
+            {% csrf_token %} 
+            <div class="block">
+                <div class="items_1" id="filter_sity" data-sity="{{my_sity_arr}}">
+                    <div class="my_elem">
+                        <div class="item">
+                            <input type="text" required placeholder="{% trans 'Откуда' %}" name="statrt" class="sity_value">
+                            <div class="value" id="text_sity_value">
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                                <p>{% trans 'text' %}</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <span></span>
+                            <input type="text" required placeholder="{% trans 'Куда' %}" name="finesh" class="sity_value">
+        
+                        </div>
+                    </div>
+                    <div class="my_elem">
+                        <div class="item">
+                            <span class="ttttttttt"></span>
+                            <input type="date" required placeholder="{% trans 'Когда' %}" name="day">
+                        </div>
+                        <div class="item">
+                            <span></span>
+                            <input type="date" placeholder="{% trans 'Обратно' %}" name="replay" id="">
+        
+                        </div>
+                    </div>
+                    <div class="item item_elem">
+                        <span></span>
+                        <div>
+                            <p>{% trans '1 пассажир' %}</p>
+                            <p>{% trans 'Эконом' %}</p>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8" fill="none">
+                            <path
+                                d="M5.79289 7.04289L0.707107 1.95711C0.0771419 1.32714 0.523309 0.25 1.41421 0.25H11.5858C12.4767 0.25 12.9229 1.32714 12.2929 1.95711L7.20711 7.04289C6.81658 7.43342 6.18342 7.43342 5.79289 7.04289Z"
+                                fill="white" fill-opacity="0.5" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="items_2">
+                    <div class="elems" id="oupen_filter" >
+                        <img src="{% static 'flights/img/filter.svg' %}" alt="">
+                    </div>
+                    <div class="elems">
+                        <button></button>
+                        <div class="item">
+                            <p>{% trans 'Найти билеты' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="items_3">
+                    <div class="item">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="item">
+                        <p>{% trans 'Подробнее' %}</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="sec2">
+    <div class="cont">
+        <div class="block">
+
+        </div>
+    </div>
+</section>
+<section class="sec3">
+    <div class="cont">
+        <div class="block">
+            <div class="block_left">
+                <div class="block_sec1">
+                    <h3>{% trans 'Пересадки' %}</h3>
+                    <p class="btn_clear"><a href="" class="btn_clear" style="text-decoration: none;">{% trans 'Сбросить' %}</a></p>
+                </div>
+                <span class="chert"></span>
+                <div class="block_sec2">
+                    <div>
+                        <input type="checkbox" class="transfers" data-item="0" id="tt3">
+                        <label for="tt3">
+                            <p>{% trans 'Без пересадок' %}</p>
+                            
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="transfers" data-item="1" id="tt2">
+                        <label for="tt2">
+                            <p>{% trans '1 пересадка' %}</p>
+                            
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="transfers" data-item="2" id="tt1">
+                        <label for="tt1">
+                            <p>{% trans '2 пересадки' %}</p>
+                            
+                        </label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="transfers" data-item="3" id="tt">
+                        <label for="tt">
+                            <p>{% trans '3 пересадки' %}</p>
+                        </label>
+                        
+                    </div>
+                </div>
+                <div class="block_sec3">
+                    <p class="text">{% trans 'Длительность пересадок' %}</p>
+                    <div class="btn_active" id="duration_btn">
+                        <p class="block_sec3_text">{% trans 'До Зч' %}</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                            <circle cx="12.7163" cy="12.5005" r="12.4321" fill="#FDFDFD" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="block_sec4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <circle cx="12.4321" cy="12.4321" r="12.4321" fill="#0089D7" />
+                        <circle cx="12.5" cy="12.5" r="9.5" fill="#FDFDFD" />
+                    </svg>
+                    <span></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                        <circle cx="12.4321" cy="12.4321" r="12.4321" fill="#0089D7" />
+                        <circle cx="12.5" cy="12.5" r="9.5" fill="#FDFDFD" />
+                    </svg>
+                    <div class="num1">4</div>
+                    <div class="num2">8</div>
+                    <div class="num3">12</div>
+                </div>
+                <div class="block_sec5">
+                    <p>{% trans 'Если комфорт важнее' %}</p>
+                </div>
+                <span class="chert"></span>
+                <div class="block_sec6">
+                    <div class="bl_0 block_sec6_1">
+                        <p>{% trans 'Без смены аэропорта' %}</p>
+                        <div>
+                            <div class="switch-btn"></div>
+                        </div>
+                    </div>
+                    <div class="bl_0 block_sec6_2">
+                        <p>{% trans 'Без ночных пересадок' %}</p>
+                        <div>
+                            <div class="switch-btn "></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block_right" id="block_right" data-sity="{{sity}}" data-arr="{{text}}">
+              
+                <h2 class="error">{{texts.text}}</h2>
+               
+                
+                {% for i in arr.data %}
+                <div class="item" id="items_ticket" data-transfers="{{i.transfers}}" data-aos="fade-in" data-destination="{{i.destination}}" data-origin="{{i.origin}}">
+                    <div class="elem">
+                        <h3 style="font-size: 28px;">{{i.price}} UZS</h3>
+                        <div class="dopPrice">
+                            <p>{% trans 'Багаж' %} <span>+ 62 000 UZS</span></p>
+                            <div class="checet ">
+                                <div class="chek"></div>
+                            </div>
+                        </div>
+                        <a href="https://www.aviasales.uz{{i.link}}">{% trans 'Выбрать' %}</a>
+                    </div>
+                    <div class="elem">
+                        <div class="logo_compani">
+                            <h5>{{i.airline}}</h5>
+                        </div>
+                        <div class="this_element qq">
+                            <div class="my_elem">
+                                <p class="p1">{% trans 'Туда' %}</p>
+                                <h4>{{i.time_to}}</h4>
+                                <p class="p2" id="sity_bilet" data-sity="{{city}}">{{i.origin}}</p>
+                                <p>{{i.departure_at }}</p>
+                            </div>
+                            <div class="my_elem">
+                                <p>{% trans 'В пути:' %} <span>{{i.duration_to}}</span></p>
+                                <div class="liyn"></div>
+                                <div class="box">
+                                    <p>TAS</p>
+                                    <p>{% trans 'Ппересадок:' %}{{i.transfers}}</p>
+                                    <p>AUH</p>
+                                </div>
+                            </div>
+                            <div class="my_elem">
+                                <h4>{{i.return_to}}</h4>
+                                <p class="op">{{i.destination}}</p>
+                                <p>{{i.departure_at }}</p>
+                            </div>
+                        </div>
+                        {% if i.back == "True" %}
+                        <div class="this_element qq2">
+                            <div class="my_elem">
+                                <p class="p1">{% trans 'Обратно' %}</p>
+                                <h4>{{i.time_beck}}</h4>
+                                <p class="p2">{{i.destination}}</p>
+                                <p>{{i.return_at}}</p>
+                            </div>
+                            <div class="my_elem">
+                                <p>{% trans 'В пути:' %} <span>{{i.duration_back}}</span></p>
+                                <div class="liyn"></div>
+                                <div class="box">
+                                    <p>AUH</p>
+                                    <p>{% trans 'Ппересадок:' %}{{i.transfers}}</p>
+                                    <p>TAS</p>
+                                </div>
+                            </div>
+                            <div class="my_elem">
+                                <h4>{{i.return_beck}}</h4>
+                                <p class="op">{{i.origin}}</p>
+                                <p>{{i.return_at}}</p>
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+
+<!-- ////////////////////////////////////////////////////////// -->
+{% block script %}
+<script src="{% static 'flights/js/bilet_script.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load i18n %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'main/scss/index.css' %}">
+{% endblock %}
+
+<!-- /////////////////////////////////////////// -->
+
+{% block title %}
+Crown Tour
+{% endblock %}
+
+<!-- ///////////////////////////////////////////////////// -->
+
+{% block content %}
+<section class="modal_mai main_mod_off">
+    <div class="block">
+        <div class="crest">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M2 2.5L22 22.5" stroke="#D9D9D9" stroke-width="4" stroke-linecap="round" />
+                <path d="M22 2.5L2 22.5" stroke="#D9D9D9" stroke-width="4" stroke-linecap="round" />
+            </svg>
+        </div>
+        <h1>{% trans 'Заказать тур' %}</h1>
+        <form action="#">
+            <span>{% trans 'Ваше имя:' %}</span>
+            <input id="user_name" type="text">
+            <span>{% trans 'Ваш телефон:' %}</span>
+            <input id="user_phone" type="tel">
+            <span>{% trans 'Выбор даты “от” и “до”:' %}</span>
+            <div class="data">
+                <span>{% trans 'От' %}</span>
+                <input id="user_data_to" type="date">
+                <span>{% trans 'До' %}</span>
+                <input id="user_data_bake" type="date">
+            </div>
+            <span>{% trans 'Направление тура:' %}</span>
+            <input id="name_tur" type="text">
+            <span>{% trans 'Количество человек:' %}</span>
+            <input id="num_users" type="text">
+            <button type="submit" id="button_tur">{% trans 'Отправить' %}</button>
+        </form>
+    </div>
+</section>
+<p data-text="{{api}}" id="textttt"></p>
+<section class="head">
+    <div class="cont">
+        <h1 class="mytext">{% trans 'Предложение туров' %}</h1>
+        <div class="box">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    {% for item in arr %}
+
+                        {% if item.premium == True %}
+                        <div class="swiper-slide">
+                            <div class="block">
+                                <div class="text">
+                                    <h2>{{item.name_tur}}</h2>
+                                    <p style="width: 320px;">
+                                        
+                                        {{item.premium_comment}}
+                                    </p>
+                                    <div class="gde">
+                                        <button class="btn_all"><a href="{% url 'state-detail' item.id %}" style="text-decoration: none;" class="btn_all">Подробнее</a></button>
+                                    </div>
+                                </div>
+                                <img src="media/{{item.img_tur}}" alt="">
+                            </div>
+                        </div>
+                        {% endif %}
+                        
+                        
+                        
+                    {% endfor %}
+
+
+
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rest" data-aos="zoom-out-up">
+    <div class="cont">
+        <h1 class="mytext">{% trans 'Виды отдыха' %}</h1>
+        <div class="items">
+            <div class="item">
+                <img src="{% static 'main/img/rest_Beach_icon.svg' %}">
+                <p>{% trans 'Пляжный' %}</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'main/img/rest_National_icon.svg' %}">
+                <p>{% trans 'Национальный' %}</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'main/img/rest_Excursions_icon.svg' %}">
+                <p>{% trans 'Экскурсии' %}</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'main/img/rest_Skiing_icon.svg' %}">
+                <p>{% trans 'Горные лыжи' %}</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'main/img/rest_Shopping_icon.svg' %}">
+                <p>{% trans 'Шоппинг' %}</p>
+            </div>
+            <div class="item">
+                <img src="{% static 'main/img/rest_Extreme_icon.svg' %}">
+                <p>{% trans 'Экстремальный' %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Book_tour" data-aos="zoom-out-up">
+    <div class="cont">
+        <h1 class="mytext">{% trans 'Забронировать тур' %}</h1>
+        <div class="block">
+            <p>{% trans 'С радостью подберем лучший тур по Вашим запросам. <br> Просто заполните форму и мы перезвоним Вам' %}</p>
+            <!--            <img src="{% static 'main/img/Book_tour_img.jpg' %}" alt="">-->
+            <button id="btn_post_main" class="btn_all">{% trans 'Заказать тур' %}</button>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+<!-- ////////////////////////////////////////////////////////// -->
+
+{% block script %}
+<script src="{% static 'main/js/index.js' %}"></script>
+{% endblock %}

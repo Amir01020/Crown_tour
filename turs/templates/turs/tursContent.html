@@ -1,0 +1,60 @@
+{% load static %}
+{% load i18n %}
+<!-- ////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+<section class="bottom">
+    <div class="cont">
+        <div class="block">
+            <h1>{% trans 'Рекомендуем для вас' %}</h1>
+
+            <div class="items">
+                <div class="swiper mySwiper_2">
+                    <div class="swiper-wrapper">
+                        {% for i in my_arr %}
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="../media/{{i.img_tur}}">
+                                <div class="block">
+                                    <div class="top">
+                                        <p>{{i.duration_tur}} {% trans 'дневный тур' %}</p>
+                                        <h3>{{i.name_tur}}</h3>
+                                        <p>{% trans 'Дата начала:' %} {{i.departure_day}}</p>
+                                    </div>
+                                    <div class="bot">
+                                        <a href="{% url 'state-detail' i.id %}">
+                                            <img src="{% static 'turs/img/glas_icon.svg' %}">
+                                            <p>{% trans 'Посмотреть' %}</p>
+                                        </a>
+                                        <div class="mon">
+                                            <span>$</span>
+                                            {% if i.price|length > 3 %}
+                                            <span style="font-size: 15px;">
+                                                {{i.price}}
+                                            </span>
+                                            {% else %}
+                                            <span>
+                                                {{i.price}}
+                                            </span>
+
+                                            {% endif %}
+                                            <span>{% trans '/ с человека' %}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>

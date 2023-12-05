@@ -1,0 +1,119 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'main/scss/fonts.css' %}">
+    {% block style %}{% endblock %}
+    <link rel="icon" href="{% static 'main/img/logo_crown.svg' %}">
+    <link rel="stylesheet" href="{% static 'main/scss/layout.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+
+                <a href="{% url 'home' %}"><img class="icons" src="{% static 'main/img/logo_crown.svg' %}" alt="">{% trans 'Crown Tour' %}</a>
+            </ul>
+            <ul>
+                <a href="{% url 'companyHome' %}">{% trans 'О компании' %}</a>
+
+                <a href="{% url 'turs' %}">{% trans 'Туры' %}</a>
+                <a href="{% url 'flights' %}">{% trans 'Авиабилеты' %}</a>
+                <a href="{% url 'visa' %}">{% trans 'Виза' %}</a>
+            </ul>
+            <ul>
+                {% get_current_language as LANGUAGE_CODE %}
+                    {% if LANGUAGE_CODE == 'ru' %}
+                        <img src="{% static 'main/img/Russia.svg' %}" alt="">
+                    {% endif %}
+                    {% if LANGUAGE_CODE == 'en' %}
+                        <img src="{% static 'main/img/flag_ang.jpg' %}" alt="">
+                    {% endif %}
+                <select name="" id="translater">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    <option style="display: none;" disabled selected>{{ LANGUAGE_CODE }}</option>
+                    <option value="ru">ru</option>
+                    <option value="en">en</option>
+                </select>
+            </ul>
+            <ul>
+                <button id="oupen_burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </ul>
+        </nav>
+        {% include 'main/leng.html' %}
+    </header>
+    <div class="burger_modls">
+        <div class="box my_burger_box">
+            <div class="logo">
+                <a href="{% url 'home' %}" class="a_logo">{% trans 'Crown Tour' %}</a>
+                <img src="{% static 'main/img/cloase_burger.svg' %}" id="cloase_burger" alt="">
+            </div>
+            <a  class="url_a" href="{% url 'companyHome' %}">{% trans 'О компании' %}</a>
+            <a class="url_a" href="{% url 'turs' %}">{% trans 'Туры' %}</a>
+            <a class="url_a" href="{% url 'flights' %}">{% trans 'Авиабилеты' %}</a>
+            <a class="url_a" href="{% url 'visa' %}">{% trans 'Виза' %}</a>
+            <div class="sel">
+
+                <select name="" id="translater">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <option style="display: none;" disabled selected>{{ LANGUAGE_CODE }}</option>
+                        <option value="ru">ru</option>
+                        <option value="en">en</option>
+                    </select>
+            </div>
+        </div>
+    </div>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="cont">
+            <div class="block">
+                <a href="{% url 'TravelersGuide' %}">
+                    {% trans 'Справочник тур <br> путешественника' %}
+                </a>
+                <div class="masage">
+                    
+                    <a href="https://www.instagram.com/crowntour/"><img src="{% static 'main/img/instagram.svg' %}" alt=""></a>
+                    <a href="https://www.facebook.com/Crowntour16"><img src="{% static 'main/img/facebook.svg' %}" alt=""></a>
+                    <a href="https://t.me/crowntour_sam"><img src="{% static 'main/img/telegram.svg' %}" alt=""></a>
+                </div>
+            </div>
+            <hr>
+            <div class="block">
+                <div class="elem">
+                    <p>{% trans 'Crown Tour 2023' %}</p>
+                </div>
+
+                <div class="elem">
+                    <a href="https://t.me/inexbrand" style="text-decoration: none; color: #6B6B6B;"><p>{% trans 'Developed by Inexbrand.uz' %}</p></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="{% static 'main/js/Swiper.js' %}"></script>
+    <script src="{% static 'main/js/language.js' %}"></script>
+    {% block script %}{% endblock %}
+</body>
+
+</html>

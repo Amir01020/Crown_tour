@@ -1,0 +1,403 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+section[data-aos="zoom-out-up"] {
+  transition: all 1s !important;
+}
+
+@mixin f($s, $a) {
+  display: flex;
+  justify-content: $s;
+  align-items: $a;
+
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+.sel{
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+}
+#translater{
+  font-size: 25px;
+  option{
+
+  }
+}
+
+.burger_modls {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #00000079;
+  z-index: 4;
+  top: 0;
+  display: none;
+  justify-content: end;
+  overflow: hidden;
+
+  .box {
+    width: 320px;
+    height: 100%;
+    padding: 10px;
+
+    .logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 4px solid #0089D7;
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    transform: translateX(100%);
+    background-color: #fff;
+
+    .url_a {
+      text-decoration: none;
+      color: #000;
+      margin-top: 20px;
+      display: flex;
+      margin-left: 10px;
+      justify-content: end;
+      text-align: end;
+      //styleName: Regular;
+      font-family: Proxima Nova;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+    .a_logo {
+      color: #0089D7;
+      font-family: Kreadon;
+      font-size: 29.179px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      text-decoration: none;
+    }
+  }
+}
+
+.burger_modls_active {
+  display: flex;
+
+  .box_active {
+    transform: translateX(0%);
+  }
+}
+
+.cont {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 95%;
+  //overflow-y: hidden;
+}
+
+main {
+  overflow: hidden;
+}
+
+
+.mytext {
+  color: #0089D7;
+  font-family: Kreadon;
+  font-size: 59.355px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sec1 .cont {
+  overflow: visible;
+}
+
+header {
+
+  nav {
+    // justify-content: ;
+    @include f(space-between, center);
+    max-width: 1440px;
+    padding: 20px;
+    margin: 0 auto;
+
+
+    ul {
+      &:nth-child(1) {
+        
+        a {
+          color: #0089D7;
+          font-family: Kreadon;
+          font-size: 29.179px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-decoration: none;
+       
+          white-space: nowrap;
+          
+          .icons{
+            width: 40px;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        @include f(center, center);
+        gap: 20px;
+
+        a {
+          text-decoration: none;
+          color: #000;
+          //styleName: Regular;
+          font-family: Proxima Nova;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19px;
+          letter-spacing: 0em;
+          text-align: left;
+
+        }
+      }
+
+      &:nth-child(3) {
+        @include f(center, center);
+        gap: 8px;
+
+        img {
+          width: 28px;
+        }
+
+        select {
+          border: 0;
+          outline: none;
+        }
+      }
+
+      &:nth-child(4) {
+        display: none;
+
+        button {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          background: none;
+          border: 0;
+
+          span {
+            background: #000000;
+            width: 28px;
+            display: block;
+            border: 2px solid #000000;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+footer {
+  .block {
+    @include f(space-between, center);
+    padding-bottom: 21px;
+
+    a {
+      color: #000;
+      font-family: Kreadon;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-decoration: none;
+    }
+
+    .masage {
+      @include f(center, center);
+      gap: 20px;
+    }
+
+    .elem {
+      @include f(center, center);
+      gap: 20px;
+
+      p {
+        color: #6B6B6B;
+        font-family: Kreadon;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1024px) {
+  .mytext {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  * {
+    font-family: Proxima Nova !important;
+  }
+
+  .head h1 {
+    font-weight: 800;
+  }
+
+  header nav ul:nth-child(2),
+  header nav ul:nth-child(3) {
+    display: none;
+  }
+
+  header nav ul:nth-child(4) {
+    display: block;
+  }
+
+  footer .block .elem p {
+    font-weight: 400;
+  }
+
+  footer .block .elem {
+    &:nth-child(2) {
+      p {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .modal_mai .block {
+    max-width: 400px;
+
+    .crest {
+      svg {
+        width: 20px;
+      }
+    }
+
+    h1 {
+
+      font-size: 30px;
+    }
+
+    form {
+      input {
+        height: 40px;
+      }
+
+      button {
+        height: 40px;
+
+      }
+    }
+  }
+  .modal_tur .block {
+    max-width: 400px;
+
+    .crest {
+      svg {
+        width: 20px;
+      }
+    }
+
+    h1 {
+
+      font-size: 30px;
+    }
+
+    form {
+      input {
+        height: 40px;
+      }
+
+      button {
+        height: 40px;
+
+      }
+    }
+  }
+  .modal_visa .block {
+    max-width: 400px;
+
+    .crest {
+      svg {
+        width: 20px;
+      }
+    }
+
+    h1 {
+
+      font-size: 30px;
+    }
+
+    form {
+      input {
+        height: 40px;
+      }
+
+      button {
+        height: 40px;
+
+      }
+    }
+  }
+}
+
+//.head .block button{
+//  transform: translate(-50%, -10%);
+//}
+@media (max-width: 650px) {
+  footer .block {
+    gap: 20px;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  footer .block .elem {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media (max-width: 424px) {
+}
+
+@media (max-width: 374px) {
+}
+
+@media (max-width: 319px) {
+}
+
+
+.sec1 .block .items_1 .my_elem .item .value_active {
+  z-index: 4;
+}

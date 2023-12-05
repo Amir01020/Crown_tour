@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-30 01:09+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\flights\templates\flights\index.html:26
+#: .\flights\templates\flights\index.html:201
+msgid "Пересадки"
+msgstr "Transplants"
+
+#: .\flights\templates\flights\index.html:27
+#: .\flights\templates\flights\index.html:202
+msgid "Сбросить"
+msgstr "Reset"
+
+#: .\flights\templates\flights\index.html:34
+#: .\flights\templates\flights\index.html:209
+msgid "Без пересадок"
+msgstr "No transfers"
+
+#: .\flights\templates\flights\index.html:41
+#: .\flights\templates\flights\index.html:216
+msgid "1 пересадка"
+msgstr "1 transfer"
+
+#: .\flights\templates\flights\index.html:48
+#: .\flights\templates\flights\index.html:223
+msgid "2 пересадки"
+msgstr "2 transfers"
+
+#: .\flights\templates\flights\index.html:55
+#: .\flights\templates\flights\index.html:230
+msgid "3 пересадки"
+msgstr "3 transfers"
+
+#: .\flights\templates\flights\index.html:61
+#: .\flights\templates\flights\index.html:236
+msgid "Длительность пересадок"
+msgstr "Duration of transfers"
+
+#: .\flights\templates\flights\index.html:63
+#: .\flights\templates\flights\index.html:238
+msgid "До Зч"
+msgstr "Up to 3h"
+
+#: .\flights\templates\flights\index.html:84
+#: .\flights\templates\flights\index.html:259
+msgid "Если комфорт важнее"
+msgstr "If comfort is more important"
+
+#: .\flights\templates\flights\index.html:89
+#: .\flights\templates\flights\index.html:264
+msgid "Без смены аэропорта"
+msgstr "No change of airport"
+
+#: .\flights\templates\flights\index.html:95
+#: .\flights\templates\flights\index.html:270
+msgid "Без ночных пересадок"
+msgstr "No overnight transfers"
+
+#: .\flights\templates\flights\index.html:111
+msgid "Откуда"
+msgstr "Where"
+
+#: .\flights\templates\flights\index.html:113
+#: .\flights\templates\flights\index.html:114
+#: .\flights\templates\flights\index.html:115
+#: .\flights\templates\flights\index.html:116
+#: .\flights\templates\flights\index.html:117
+#: .\flights\templates\flights\index.html:118
+#: .\flights\templates\flights\index.html:119
+#: .\flights\templates\flights\index.html:120
+#: .\flights\templates\flights\index.html:121
+#: .\flights\templates\flights\index.html:122
+#: .\flights\templates\flights\index.html:123
+#: .\flights\templates\flights\index.html:124
+#: .\flights\templates\flights\index.html:125
+#: .\flights\templates\flights\index.html:126
+#: .\flights\templates\flights\index.html:127
+#: .\flights\templates\flights\index.html:128
+#: .\flights\templates\flights\index.html:129
+#: .\flights\templates\flights\index.html:130
+#: .\flights\templates\flights\index.html:131
+msgid "text"
+msgstr "text"
+
+#: .\flights\templates\flights\index.html:136
+msgid "Куда"
+msgstr "Where"
+
+#: .\flights\templates\flights\index.html:143
+msgid "Когда"
+msgstr "When"
+
+#: .\flights\templates\flights\index.html:147
+#: .\flights\templates\flights\index.html:323
+msgid "Обратно"
+msgstr "Back"
+
+#: .\flights\templates\flights\index.html:154
+msgid "1 пассажир"
+msgstr "1 passenger"
+
+#: .\flights\templates\flights\index.html:155
+msgid "Эконом"
+msgstr "Economy"
+
+#: .\flights\templates\flights\index.html:171
+msgid "Найти билеты"
+msgstr "Find tickets"
+
+#: .\flights\templates\flights\index.html:182
+msgid "Подробнее"
+msgstr "More details"
+
+#: .\flights\templates\flights\index.html:287
+msgid "Багаж"
+msgstr "Baggage"
+
+#: .\flights\templates\flights\index.html:292
+msgid "Выбрать"
+msgstr "Choose"
+
+#: .\flights\templates\flights\index.html:300
+msgid "Туда"
+msgstr "There"
+
+#: .\flights\templates\flights\index.html:306
+#: .\flights\templates\flights\index.html:329
+msgid "В пути:"
+msgstr "On my way:"
+
+#: .\flights\templates\flights\index.html:310
+#: .\flights\templates\flights\index.html:333
+msgid "Ппересадок:"
+msgstr "Transfers:"

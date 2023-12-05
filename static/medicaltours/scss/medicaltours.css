@@ -1,0 +1,143 @@
+.head {
+  margin-top: 25px;
+}
+.head .block {
+  position: relative;
+  max-width: 1400px;
+  max-height: 500px;
+  border-radius: 30px;
+  margin: 0 auto;
+}
+.head .block img {
+  width: 100%;
+  height: 100%;
+}
+.head .block p {
+  color: #FFF;
+  text-align: center;
+  font-family: Kreadon;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding-top: 29px;
+}
+
+.Tours {
+  margin: 50px 0 73px;
+}
+.Tours .items {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  justify-content: center;
+}
+.Tours .items .item {
+  width: 453px;
+  height: 500px;
+  position: relative;
+  border-radius: 20px;
+}
+.Tours .items .item img {
+  width: 100%;
+  height: 100%;
+}
+.Tours .items .item .block {
+  width: 413px;
+  height: 189px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFF;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px 20px;
+}
+.Tours .items .item .block .top p {
+  color: #000;
+  font-family: Kreadon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Tours .items .item .block .top p:nth-child(3) {
+  margin-top: 15px;
+}
+.Tours .items .item .block .top h3 {
+  color: #000;
+  font-family: Kreadon;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.Tours .items .item .block .bot {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 31px;
+}
+.Tours .items .item .block .bot a {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  gap: 5px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 8px;
+  background: #0089D7;
+  text-decoration: none;
+}
+.Tours .items .item .block .bot a img {
+  width: 21.001px;
+  height: 12.727px;
+}
+.Tours .items .item .block .bot a p {
+  color: #FFF;
+  font-family: Kreadon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.Tours .items .item .block .bot .mon {
+  display: flex;
+  align-items: center;
+}
+.Tours .items .item .block .bot .mon span:nth-child(1) {
+  color: #000;
+  font-family: Kreadon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: 2px;
+}
+.Tours .items .item .block .bot .mon span:nth-child(2) {
+  color: #000;
+  font-family: Kreadon;
+  font-size: 27.2px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: 7px;
+}
+.Tours .items .item .block .bot .mon span:nth-child(3) {
+  color: #000;
+  font-family: Kreadon;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.swiper {
+  width: 100%;
+}/*# sourceMappingURL=medicaltours.css.map */

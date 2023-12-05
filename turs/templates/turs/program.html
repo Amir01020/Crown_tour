@@ -1,0 +1,54 @@
+{% load static %}
+{% load i18n %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+
+<div class="BlockContent tur_clouce" id="clouce_tur_block">
+    <div class="left">
+        <div class="box1">
+            <p>{{state.how_many_days}} {% trans 'Дней' %} / {{state.how_many_nights}} {% trans 'Ночей' %}</p>
+            <p>{% trans 'Цена:' %} {{state.price}}$</p>
+            <p>{% trans 'Сезон:' %} {{state.season}}</p>
+        </div>
+        <div class="box2">
+            <p><span>{% trans 'План тура' %}</span></p>
+        </div>
+        {% for fs in state.tru_io.all %}
+        <div class="box3">
+            <div class="blueBox">
+                <p>{% trans 'День' %} {{fs.day_tur}}</p>
+            </div>
+            <div class="textBox">
+                <p>{{fs.comment_turs}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="right">
+        <div class="box_info">
+            <div>
+                <p>{% trans 'С человека' %}/</p>
+                {% if state.price|length > 3 %}
+                <p style="font-size: 40px">{{state.price}}$</p>
+                {% else %}
+                <p>{{state.price}}$</p>
+                {% endif %}
+            </div>
+            <div>
+                <p>{% trans 'На момент' %} {{state.create_day}}</p>
+            </div>
+            <div>
+                <img class="type_tur_img" data-type="{{state.type_turs}}" src="">
+
+            </div>
+            <div>
+                <p>{% trans 'Вылет:' %} {{state.departure_day}}</p>
+            </div>
+            <div class="marbtn">
+
+                <button class="marbtn2" id="btn_post_turs">{% trans 'Оставить заявку' %}</button>
+            </div>
+        </div>
+    </div>
+</div>

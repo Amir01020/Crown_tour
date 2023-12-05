@@ -1,0 +1,83 @@
+.head {
+  margin-top: 25px;
+}
+.head .block {
+  position: relative;
+  max-width: 1400px;
+  max-height: 500px;
+  margin: 0 auto;
+}
+.head .block img {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.AboutUs {
+  margin-top: 15px;
+}
+.AboutUs .block h1 {
+  color: #000;
+  text-align: center;
+  font-family: Kreadon;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.AboutUs .block p {
+  padding: 0 108px;
+  margin: 22px 0 10px;
+  color: #000;
+  font-family: Kreadon;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.AboutUs .block .text_p {
+  margin: 0 0 25px;
+}
+.AboutUs .block .text_p p {
+  margin: 0;
+}
+.AboutUs .block .adr {
+  margin: 0 0 80px;
+}
+.AboutUs .block .adr p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .AboutUs .block h1 {
+    color: #0089D7;
+    text-align: start;
+    font-size: 32px;
+    padding: 0 50px;
+  }
+  .AboutUs .block p {
+    font-size: 18px;
+    padding: 0 50px;
+    margin: 16px 0 10px;
+  }
+}
+@media (max-width: 425px) {
+  .AboutUs .block h1 {
+    color: #0089D7;
+    text-align: start;
+    font-size: 30px;
+    padding: 0 10px;
+  }
+  .AboutUs .block p {
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 10px 0 10px;
+  }
+  .head .block img {
+    height: 200px;
+  }
+}/*# sourceMappingURL=company.css.map */

@@ -1,0 +1,472 @@
+@mixin f($s, $a) {
+  display: flex;
+  justify-content: $s;
+  align-items: $a;
+
+}
+
+.main_mod_off {
+  display: none !important;
+}
+
+.modal_mai {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: linear-gradient(180deg, #121212 10.94%, rgba(18, 18, 18, 0) 100%);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  // transform: translate(-50%, -50%);
+  z-index: 2;
+
+  .block {
+    position: relative;
+  }
+
+  .crest {
+    position: absolute;
+    right: 27px;
+    top: 35px;
+    cursor: pointer;
+  }
+
+  .block {
+    width: 500px;
+    border-radius: 30px;
+    background: #FFF;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 10px rgba(34, 60, 80, 0.1);
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      data {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      span {
+        color: #000;
+        font-family: Kreadon;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      input {
+        margin: 10px 0;
+        height: 50px;
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      textarea {
+        margin: 10px 0;
+        resize: none;
+        border-radius: 10px;
+        height: 178px;
+      }
+
+      button {
+        display: flex;
+        width: 189px;
+        padding: 10px 30px;
+        justify-content: space-between;
+        align-items: center;
+        background: #D9D9D9;
+        color: #000;
+        font-family: Kreadon;
+        font-size: 26.154px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: 0;
+        cursor: pointer;
+      }
+
+
+    }
+
+    h1 {
+      margin-bottom: 12px;
+      color: #000;
+      font-family: Kreadon;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+}
+
+.btn_all {
+  @include f(center, center);
+
+  padding: 15px 20px;
+  gap: 10px;
+  border-radius: 10px;
+  background: #0089D7;
+  border: 0;
+
+  color: #FFF;
+  font-family: Proxima Nova;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.head {
+  margin-top: 50px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .box {
+    .swiper {
+      width: 100%;
+
+      .swiper-wrapper {
+        width: 100%;
+
+        .swiper-slide {
+          width: 100%;
+
+          .block {
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+
+            .text {
+              position: relative;
+              z-index: 1;
+              color: #fff;
+              padding: 60px 120px;
+              height: 100%;
+
+              @include f(space-between, start);
+              flex-direction: column;
+
+              h2 {
+                color: #FFF;
+                font-family: Kreadon;
+                font-size: 55.619px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              }
+
+              p {
+                color: #FFF;
+                font-family: Kreadon;
+                font-size: 31.277px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+              }
+
+              button {
+                width: 213px;
+              }
+            }
+
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              border-radius: 30px;
+              object-fit: cover;
+              object-position: center;
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+.Medical {
+  margin-top: 109px;
+
+  .block {
+    @include f(center, center);
+    gap: 37px;
+
+    h1 {
+      padding-bottom: 20.4px;
+    }
+
+    p {
+      color: #000;
+      font-family: Kreadon;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding-bottom: 18px;
+    }
+
+    button {
+      width: 217px;
+    }
+
+    .right_block {
+      img {
+        border-radius: 30px;
+        width: 690px;
+      }
+    }
+  }
+
+}
+
+.rest {
+  margin-top: 55px;
+
+  .items {
+    @include f(center, center);
+    gap: 30px;
+    padding: 58px 0;
+    flex-wrap: wrap;
+
+
+    .item {
+      @include f(center, center);
+      border-radius: 20px;
+      background: #EDEDED;
+      padding: 10px 21px;
+      gap: 30px;
+      flex-direction: column;
+
+      &:hover {
+        transform: scale(1.10);
+        box-shadow: 0 0 10px #00000071;
+      }
+
+      p {
+        color: #0089D7;
+        font-family: Kreadon;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.Book_tour {
+  margin: 20px 0 80px;
+
+  h1 {
+    margin: 0 0 20px;
+  }
+
+  .block {
+    background-image: url("../img/Book_tour_img.jpg");
+    height: 350px;
+    @include f(space-between, center);
+    padding: 25px 0 20px;
+    flex-direction: column;
+    border-radius: 30px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    p {
+      color: #FFF;
+      text-align: center;
+      font-family: Kreadon;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    button {
+      width: 453px;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1250px) {
+  .Medical .block .right_block img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Medical .block {
+    flex-direction: column-reverse;
+  }
+
+  .Medical .block .right_block {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Medical .block .right_block img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cont {
+    padding: 0 19px;
+  }
+
+  .mytext {
+    font-size: 45px;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text {
+    padding: 70px 80px;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text h2 {
+    font-size: 48px;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text p {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 650px) {
+  .rest .items {
+    gap: 10px;
+  }
+
+  .rest .items .item {
+    gap: 12px;
+  }
+
+  .rest .items .item img {
+    width: 77.049px;
+    height: 77.596px;
+  }
+
+  .rest .items .item p {
+    font-size: 12px;
+  }
+
+  .Medical .block button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block {
+    height: 440px;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text {
+    padding: 20px;
+    justify-content: start;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text h2 {
+    font-size: 32px;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text p {
+    font-size: 16px;
+    width: 100% !important;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text .gde {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  .head .box .swiper .swiper-wrapper .swiper-slide .block .text button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: none;
+  }
+
+  .Book_tour .block {
+    padding: 20px;
+  }
+
+  .Book_tour .block button {
+    width: 100%;
+  }
+
+  .Book_tour .block p {
+    text-align: start;
+  }
+
+}
+
+@media (max-width: 424px) {
+  .rest .items .item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .rest .items {
+    padding: 10px 0;
+  }
+
+  .rest .items .item {
+    padding: 10px;
+    width: 100px;
+  }
+
+  .mytext {
+    font-size: 30px;
+  }
+  .head h1 {
+    font-size: 30px;
+  }
+
+  .Book_tour h1 {
+    margin: 0 0 10px;
+  }
+
+  .Medical {
+    margin-top: 70px;
+  }
+
+  .head {
+    margin-top: 16px;
+  }
+  .Book_tour .block p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 374px) {
+}
+
+@media (max-width: 319px) {
+}

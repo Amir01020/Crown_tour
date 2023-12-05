@@ -1,0 +1,105 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load i18n %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block title %}
+turs
+{% endblock %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'turs/scss/turs.css' %}">
+{% endblock %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block content %}
+
+<section class="head">
+    <div class="cont">
+        <div class="block">
+            <img src="{% static 'turs/img/header_tur_img.png' %}">
+            <p>{% trans 'Туры' %}</p>
+        </div>
+    </div>
+</section>
+<section class="search">
+    <div class="cont">
+        <div class="box">
+            <div class="block">
+          
+                <select name="" id="select_citi">
+                    
+                    <option value="" class="filter" data-city="defold">{% trans 'Страны' %}</option>
+                   
+                </select>
+                <select name="" id="select_view">
+                    
+                    <option value="defold" class="filter" data-views="defold">{% trans 'Тип тура' %}</option>
+                    <option value="{% trans 'пляжный' %}" class="filter" data-views="{% trans 'пляжный' %}">{% trans 'Пляжный' %}</option>
+                    <option value="{% trans 'национальный' %}" class="filter" data-views="{% trans 'национальный' %}">{% trans 'Национальный' %}</option>
+                    <option value="{% trans 'экскурсии' %}" class="filter" data-views="{% trans 'экскурсии' %}">{% trans 'Экскурсии' %}</option>
+                    <option value="{% trans 'горные лыжи' %}" class="filter" data-views="{% trans 'горные лыжи' %}">{% trans 'Горные лыжи' %}</option>
+                    <option value="{% trans 'шоппинг' %}" class="filter" data-views="{% trans 'шоппинг' %}">{% trans 'Шоппинг' %}</option>
+                    <option value="{% trans 'экстремальный' %}" class="filter" data-views="{% trans 'экстремальный' %}">{% trans 'Экстремальный' %}</option>
+                </select>
+                
+                <button>
+                    <img src="{% static 'turs/img/search_icon.svg' %}">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="Tours">
+    <div class="cont">
+        <div class="items">
+            {% for i in arr %}
+            <div class="item" id="tursElement" data-aos="zoom-out-up" data-arrival_city="{{i.arrival_city}}" data-departure_city="{{i.departure_city}}" data-view="{{i.type_turs}}" >
+                
+                <img src="media/{{i.img_tur}}">
+                <div class="block">
+                    <div class="top">
+                        <p>{{i.duration_tur}} {% trans 'дневный тур' %}</p>
+                        <h3>{{i.name_tur}}</h3>
+                        <p>{% trans 'Дата начала:' %} {{i.departure_day}}</p>
+                    </div>
+                    <div class="bot">
+                        <a href="{% url 'state-detail' i.id %}">
+                            <img src="{% static 'turs/img/glas_icon.svg' %}">
+                            <p>{% trans 'Посмотреть' %}</p>
+                        </a>
+                        <div class="mon">
+                            <span>$</span>
+                            {% if i.price|length > 3 %}
+                                <span style="font-size: 15px;">
+                                    {{i.price}}
+                                </span>
+                            {% else %}
+                            <span>
+                                {{i.price}}
+                            </span>
+                            
+                            {% endif %}
+                            <span>{% trans '/ с человека' %}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+{% block script %}
+    <script src="{% static 'turs/js/tursHome.js' %}"></script>
+{% endblock %}

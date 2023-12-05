@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-07 13:54+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\main\templates\main\index.html:28 .\main\templates\main\index.html:131
+msgid "Заказать тур"
+msgstr "Book a tour"
+
+#: .\main\templates\main\index.html:30
+msgid "Ваше имя:"
+msgstr "Your name:"
+
+#: .\main\templates\main\index.html:32
+msgid "Ваш телефон:"
+msgstr "Your phone number:"
+
+#: .\main\templates\main\index.html:34
+msgid "Выбор даты “от” и “до”:"
+msgstr "Selecting the “from” and “to” dates:"
+
+#: .\main\templates\main\index.html:36
+msgid "От"
+msgstr "From"
+
+#: .\main\templates\main\index.html:38
+msgid "До"
+msgstr "Before"
+
+#: .\main\templates\main\index.html:41
+msgid "Направление тура:"
+msgstr "Tour direction:"
+
+#: .\main\templates\main\index.html:43
+msgid "Количество человек:"
+msgstr "Number of persons:"
+
+#: .\main\templates\main\index.html:45
+msgid "Отправить"
+msgstr "Send"
+
+#: .\main\templates\main\index.html:52
+msgid "Предложение туров"
+msgstr "Tour offer"
+
+#: .\main\templates\main\index.html:96
+msgid "Виды отдыха"
+msgstr "Types of recreation"
+
+#: .\main\templates\main\index.html:100
+msgid "Пляжный"
+msgstr "Beach"
+
+#: .\main\templates\main\index.html:104
+msgid "Национальный"
+msgstr "National"
+
+#: .\main\templates\main\index.html:108
+msgid "Экскурсии"
+msgstr "Excursions"
+
+#: .\main\templates\main\index.html:112
+msgid "Горные лыжи"
+msgstr "Skiing"
+
+#: .\main\templates\main\index.html:116
+msgid "Шоппинг"
+msgstr "Shopping"
+
+#: .\main\templates\main\index.html:120
+msgid "Экстремальный"
+msgstr "Extreme"
+
+#: .\main\templates\main\index.html:127
+msgid "Забронировать тур"
+msgstr "Book a tour"
+
+#: .\main\templates\main\index.html:129
+msgid ""
+"С радостью подберем лучший тур по Вашим запросам. <br> Просто заполните "
+"форму и мы перезвоним Вам"
+msgstr ""
+"We will be happy to select the best tour according to your needs. <br> Just "
+"fill in form and we will call you back"
+
+#: .\main\templates\main\layout.html:22 .\main\templates\main\layout.html:59
+msgid "Crown Tour"
+msgstr "Crown Tour"
+
+#: .\main\templates\main\layout.html:25 .\main\templates\main\layout.html:62
+msgid "О компании"
+msgstr "About company"
+
+#: .\main\templates\main\layout.html:27 .\main\templates\main\layout.html:63
+msgid "Туры"
+msgstr "Tours"
+
+#: .\main\templates\main\layout.html:28 .\main\templates\main\layout.html:64
+msgid "Авиабилеты"
+msgstr "Flights"
+
+#: .\main\templates\main\layout.html:29 .\main\templates\main\layout.html:65
+msgid "Виза"
+msgstr "Visa"
+
+#: .\main\templates\main\layout.html:86
+msgid "Справочник тур <br> путешественника"
+msgstr "Tour <br> Traveler's Guide"
+
+#: .\main\templates\main\layout.html:98
+msgid "Crown tour 2023"
+msgstr "Crown tour 2023"
+
+#: .\main\templates\main\layout.html:102
+msgid "Developed by Inexbrand.uz"
+msgstr "Developed by Inexbrand.uz"

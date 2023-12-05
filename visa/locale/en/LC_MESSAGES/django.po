@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-08 15:12+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\visa\templates\visa\tickets.html:10
+msgid "Откуда"
+msgstr "Where"
+
+#: .\visa\templates\visa\tickets.html:15
+msgid "Куда"
+msgstr "Where"
+
+#: .\visa\templates\visa\tickets.html:20
+msgid "Когда"
+msgstr "When"
+
+#: .\visa\templates\visa\tickets.html:25
+msgid "Обратно"
+msgstr "Back"
+
+#: .\visa\templates\visa\visa.html:29
+msgid "Оставить заявку"
+msgstr "Submit your application"
+
+#: .\visa\templates\visa\visa.html:31
+msgid "Ваше имя:"
+msgstr "Your name:"
+
+#: .\visa\templates\visa\visa.html:33
+msgid "Ваш телефон:"
+msgstr "Your phone number:"
+
+#: .\visa\templates\visa\visa.html:35
+msgid "Ваш E-mail:"
+msgstr "Your E=mail:"
+
+#: .\visa\templates\visa\visa.html:37
+msgid "Из какого вы Города, Страны?:"
+msgstr "What City, Country are you from?:"
+
+#: .\visa\templates\visa\visa.html:39
+msgid "Визу какой страны вы хотите получить?:"
+msgstr "Which country visa do you want to get?:"
+
+#: .\visa\templates\visa\visa.html:41
+msgid "Отправить"
+msgstr "Send"
+
+#: .\visa\templates\visa\visa.html:49
+msgid "Получить визу"
+msgstr "Get a visa"
+
+#: .\visa\templates\visa\visa.html:56
+msgid ""
+"Мы готовы предоставить вам визовую поддержку, чтобы сделать ваше путешествие "
+"легким и беззаботным. Независимо от того, куда вы собираетесь, наши эксперты "
+"по визовым вопросам помогут вам с оформлением визы и другими необходимыми "
+"документами. <br><br> Наши услуги включают: <br><br> Консультации по визовым "
+"вопросам: Наши опытные специалисты по визам будут рады ответить на все ваши "
+"вопросы и предоставить информацию о необходимых документах и процессе подачи "
+"заявки на визу. <br><br> Подготовка и подача документов: Мы поможем вам "
+"собрать все необходимые документы и гарантированно подадим заявку на визу в "
+"консульство или посольство выбранной страны. <br><br> Слежение за процессом: "
+"Мы будем следить за процессом рассмотрения вашей визы и уведомим вас о любых "
+"изменениях или необходимых действиях. <br><br> Аварийная поддержка: В случае "
+"возникновения проблем с визой во время вашей поездки, наши специалисты будут "
+"доступны 24/7, чтобы оказать вам неотложную помощь. <br><br> Почему выбирать "
+"нас: <br><br> Профессионализм: Наши эксперты имеют многолетний опыт в сфере "
+"визовой поддержки и знают все нюансы процесса. <br><br> Индивидуальный "
+"подход: Мы работаем с каждым клиентом индивидуально, учитывая его уникальные "
+"потребности. <br><br> Уверенность в результатах: Мы гарантируем, что ваша "
+"виза будет подана правильно и в срок. <br><br> Прозрачная ценовая политика: "
+"Наши цены честны и конкурентоспособны. <br><br> Независимо от того, "
+"путешествуете ли вы ради отдыха, бизнеса или обучения, наши услуги визовой "
+"поддержки помогут вам сделать ваше путешествие комфортным и беззаботным."
+msgstr ""
+"We are ready to provide you with visa support to make your trip easy and worry-free. No matter where you're going, our visa experts can help you with your visa and other necessary paperwork. <br><br> Our services include: <br><br> Visa Advice: Our experienced visa specialists will be happy to answer all your questions and provide information on the required documents and the visa application process. <br><br> Preparation and submission of documents: We will help you collect all the necessary documents and are guaranteed to submit an application for a visa to the consulate or embassy of the selected country. <br><br> Monitoring the Process: We will monitor your visa process and notify you of any changes or actions required. <br><br> Emergency Support: Should any visa issues arise during your trip, our specialists will be available 24/7 to provide you with emergency assistance. <br><br> Why choose us: <br><br> Professionalism: Our experts have many years of experience in the field of visa support and know all the nuances of the process. <br><br> Individual approach: We work with each client individually, taking into account his unique needs. <br><br> Confidence in results: We guarantee that your visa will be submitted correctly and on time. <br><br> Transparent pricing policy: Our prices are fair and competitive. <br><br> Whether you are traveling for leisure, business or education, our visa support services will help you make your trip comfortable and stress-free."

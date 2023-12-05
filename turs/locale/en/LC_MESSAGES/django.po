@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-07 13:54+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\turs\templates\turs\program.html:10
+msgid "Дней"
+msgstr "Days"
+
+#: .\turs\templates\turs\program.html:10
+msgid "Ночей"
+msgstr "Nights"
+
+#: .\turs\templates\turs\program.html:11
+msgid "Цена:"
+msgstr "Price:"
+
+#: .\turs\templates\turs\program.html:12
+msgid "Сезон:"
+msgstr "Season:"
+
+#: .\turs\templates\turs\program.html:15
+msgid "План тура"
+msgstr "Tour plan"
+
+#: .\turs\templates\turs\program.html:20
+msgid "День"
+msgstr "Day"
+
+#: .\turs\templates\turs\program.html:31
+msgid "С человека"
+msgstr "Per person"
+
+#: .\turs\templates\turs\program.html:39
+msgid "На момент"
+msgstr "At the moment"
+
+#: .\turs\templates\turs\program.html:46
+#: .\turs\templates\turs\tursDescription.html:134
+msgid "Вылет:"
+msgstr "Departure:"
+
+#: .\turs\templates\turs\program.html:50
+#: .\turs\templates\turs\tursDescription.html:138
+msgid "Оставить заявку"
+msgstr "Submit your application"
+
+#: .\turs\templates\turs\turHome.html:25
+msgid "Туры"
+msgstr "Tours"
+
+#: .\turs\templates\turs\turHome.html:36
+msgid "Страны"
+msgstr "Countries"
+
+#: .\turs\templates\turs\turHome.html:41
+msgid "Тип тура"
+msgstr "Tour type"
+
+#: .\turs\templates\turs\turHome.html:42
+msgid "пляжный"
+msgstr "beach"
+
+#: .\turs\templates\turs\turHome.html:42
+msgid "Пляжный"
+msgstr "Beach"
+
+#: .\turs\templates\turs\turHome.html:43
+msgid "национальный"
+msgstr "National"
+
+#: .\turs\templates\turs\turHome.html:43
+msgid "Национальный"
+msgstr "National"
+
+#: .\turs\templates\turs\turHome.html:44
+msgid "экскурсии"
+msgstr "excursions"
+
+#: .\turs\templates\turs\turHome.html:44
+msgid "Экскурсии"
+msgstr "Excursions"
+
+#: .\turs\templates\turs\turHome.html:45
+msgid "горные лыжи"
+msgstr "skiing"
+
+#: .\turs\templates\turs\turHome.html:45
+msgid "Горные лыжи"
+msgstr "Skiing"
+
+#: .\turs\templates\turs\turHome.html:46
+msgid "шоппинг"
+msgstr "shopping"
+
+#: .\turs\templates\turs\turHome.html:46
+msgid "Шоппинг"
+msgstr "Shopping"
+
+#: .\turs\templates\turs\turHome.html:47
+msgid "экстремальный"
+msgstr "extreme"
+
+#: .\turs\templates\turs\turHome.html:47
+msgid "Экстремальный"
+msgstr "Extreme"
+
+#: .\turs\templates\turs\turHome.html:66
+#: .\turs\templates\turs\tursContent.html:23
+msgid "дневный тур"
+msgstr "day tour"
+
+#: .\turs\templates\turs\turHome.html:68
+#: .\turs\templates\turs\tursContent.html:25
+msgid "Дата начала:"
+msgstr "Start date:"
+
+#: .\turs\templates\turs\turHome.html:73
+#: .\turs\templates\turs\tursContent.html:30
+msgid "Посмотреть"
+msgstr "Look"
+
+#: .\turs\templates\turs\turHome.html:87
+#: .\turs\templates\turs\tursContent.html:44
+msgid "/ с человека"
+msgstr "/ per person"
+
+#: .\turs\templates\turs\tursContent.html:12
+msgid "Рекомендуем для вас"
+msgstr "We recommend for you"
+
+#: .\turs\templates\turs\tursDescription.html:28
+msgid "Форма заявки"
+msgstr "Application form"
+
+#: .\turs\templates\turs\tursDescription.html:30
+msgid "Ваше имя:"
+msgstr "Your name:"
+
+#: .\turs\templates\turs\tursDescription.html:32
+msgid "Ваш телефон:"
+msgstr "Your phone number:"
+
+#: .\turs\templates\turs\tursDescription.html:36
+msgid "Ваши комментарии:"
+msgstr "Your comments:"
+
+#: .\turs\templates\turs\tursDescription.html:38
+msgid "Отправить"
+msgstr "Send"
+
+#: .\turs\templates\turs\tursDescription.html:57
+msgid "Описание"
+msgstr "Description"
+
+#: .\turs\templates\turs\tursDescription.html:60
+msgid "Программа"
+msgstr "Program"
+
+#: .\turs\templates\turs\tursDescription.html:74
+msgid "Описание тура"
+msgstr "Tour description"
+
+#: .\turs\templates\turs\tursDescription.html:81
+msgid "Отели:"
+msgstr "Hotels:"
+
+#: .\turs\templates\turs\tursDescription.html:82
+msgid "Питание:"
+msgstr "Nutrition:"
+
+#: .\turs\templates\turs\tursDescription.html:83
+msgid "Тип номера:"
+msgstr "Type of number:"
+
+#: .\turs\templates\turs\tursDescription.html:86
+msgid "Перелёт:"
+msgstr "Flight:"
+
+#: .\turs\templates\turs\tursDescription.html:90
+msgid "Включено в стоимость:"
+msgstr "Included in the price:"
+
+#: .\turs\templates\turs\tursDescription.html:100
+msgid "Не включено в стоимость:"
+msgstr "Not included in the price:"
+
+#: .\turs\templates\turs\tursDescription.html:110
+msgid "Включение:"
+msgstr "Inclusion:"
+
+#: .\turs\templates\turs\tursDescription.html:118
+msgid "с человека/"
+msgstr "per person/"
+
+#: .\turs\templates\turs\tursDescription.html:127
+msgid "на момент"
+msgstr "at the moment"

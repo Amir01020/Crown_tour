@@ -1,0 +1,354 @@
+.head {
+  margin-top: 25px;
+
+  .block {
+    position: relative;
+    max-width: 1400px;
+    max-height: 500px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      max-height: 500px;
+      border-radius: 30px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    p {
+      color: #000;
+      text-align: center;
+      font-family: Kreadon;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding-top: 29px;
+    }
+  }
+}
+
+.search {
+  margin-top: 30px;
+  display: flex;
+
+  .box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .block {
+    display: inline-flex;
+    padding: 10px 26px;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+
+    border-radius: 5px;
+    background: #0089D7;
+
+    select {
+      border: 0;
+      background-color: transparent;
+      outline: none;
+      color: rgba(255, 255, 255, 0.50);
+      font-family: Kreadon;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 5px;
+      // background-color: red;
+      border-right: 1px solid #fff;
+
+      &:hover {
+
+      }
+
+      option {
+        color: #000;
+
+        border: 0 !important;
+        border-radius: 20px;
+      }
+    }
+
+
+    button {
+      background: none;
+      border: 0;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.Tours {
+  margin: 30px 0 110px;
+
+  .items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 20px;
+    justify-content: center;
+
+    .item {
+      width: 390px;
+      height: 500px;
+      position: relative;
+      border-radius: 20px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .block {
+        width: 90%;
+        height: 189px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #FFF;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 10px 20px;
+
+        .top {
+          p {
+            &:nth-child(1) {
+            }
+
+            &:nth-child(3) {
+              margin-top: 15px;
+            }
+
+            color: #000;
+            font-family: Kreadon;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+
+          }
+
+          h3 {
+            color: #000;
+            font-family: Kreadon;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+          }
+
+        }
+
+        .bot {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-top: 31px;
+
+          a {
+            display: flex;
+            //width: 143.001px;
+            //height: 41px;
+            padding: 10px 15px;
+            align-items: center;
+            gap: 5px;
+            flex-shrink: 0;
+            border: 0;
+            border-radius: 8px;
+            background: #0089D7;
+            text-decoration: none;
+
+            img {
+              width: 21.001px;
+              height: 12.727px;
+            }
+
+            p {
+              color: #FFF;
+              font-family: Kreadon;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+
+          .mon {
+            display: flex;
+            align-items: center;
+
+            span {
+              &:nth-child(1) {
+                color: #000;
+                font-family: Kreadon;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-right: 2px;
+              }
+
+              &:nth-child(2) {
+                color: #000;
+                font-family: Kreadon;
+                font-size: 27.2px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-right: 7px;
+              }
+
+              &:nth-child(3) {
+                color: #000;
+                font-family: Kreadon;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .none {
+      display: none;
+    }
+  }
+
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1250px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .head .block p {
+    font-size: 32px;
+  }
+
+  .head .block img {
+    height: 440px;
+  }
+}
+
+@media (max-width: 650px) {
+  .search {
+    display: block;
+  }
+
+  .search .block {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .search .block .select {
+    margin: 0;
+  }
+  .search .block select {
+    width: 135px;
+  }
+  .search .block button {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search .block .select {
+    font-size: 16px;
+  }
+
+  .search .block button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .Tours .items .item .block {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .Tours .items .item .block .bot .mon {
+    flex-wrap: wrap;
+  }
+
+  .Tours .items {
+    gap: 10px;
+  }
+  //.search .block select {
+  //  font-size: 16px;
+  //}
+}
+
+@media (max-width: 424px) {
+  .search .block .select {
+    gap: 8px;
+  }
+
+  .search .block .select img {
+    width: 14px;
+  }
+
+  .search .block {
+    gap: 10px;
+  }
+
+  .Tours .items .item .block .bot .mon span:nth-child(2) {
+    line-height: 25px;
+  }
+
+  .search .block select {
+    font-size: 16px;
+  }
+  .search .block select {
+    width: 95px;
+  }
+  .search .block button {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 374px) {
+}
+
+@media (max-width: 319px) {
+}
+
+
+.Tours .items .item .block .bot a {
+  &:hover {
+    background-color: #033f61;
+  }
+}
+

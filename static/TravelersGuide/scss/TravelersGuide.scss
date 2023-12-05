@@ -1,0 +1,94 @@
+.head {
+  margin-top: 25px;
+
+  .block {
+    position: relative;
+    max-width: 1400px;
+    max-height: 500px;
+    border-radius: 30px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+      max-height: 500px;
+    }
+  }
+}
+
+.chert {
+  margin: 54px 0 80px;
+
+  .block {
+    .block1 {
+      h1 {
+        margin-bottom: 55px;
+        padding: 0 10px;
+        color: #000;
+        font-family: Kreadon;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+
+    .block2 {
+      padding: 0 108px;
+
+      h2 {
+        margin-top: 20px;
+        color: #000;
+        font-family: Kreadon;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      p {
+        margin-top: 15px;
+        color: #000;
+        font-family: Kreadon;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .chert .block .block1 h1 {
+    color: #0089D7;
+    font-size: 36px;
+  }
+  .chert .block .block2 h2 {
+    font-size: 32px;
+  }
+  .chert .block .block2 {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  .chert .block .block1 h1 {
+    line-height: 28px;
+    font-size: 30px;
+    margin-bottom: 21px;
+  }
+  .chert .block .block2 {
+    padding: 0 10px;
+  }
+  .chert .block .block2 h2 {
+    font-size: 20px;
+    margin-top: 42px;
+  }
+  .chert .block .block2 p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .chert {
+    margin: 10px 0 49px;
+  }
+  .head .block img {
+    height: 200px;
+  }
+}

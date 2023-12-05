@@ -1,0 +1,155 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% load i18n %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block title %}
+turs
+{% endblock %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'turs/scss/turs_content.css' %}">
+{% endblock %}
+
+<!-- ////////////////////////////////////////////////////////////// -->
+
+{% block content %}
+<section class="modal_tur tur_mod_off">
+    <div class="block">
+        <div class="crest">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                <path d="M2 2.5L22 22.5" stroke="#D9D9D9" stroke-width="4" stroke-linecap="round" />
+                <path d="M22 2.5L2 22.5" stroke="#D9D9D9" stroke-width="4" stroke-linecap="round" />
+            </svg>
+        </div>
+        <h1>{% trans 'Форма заявки' %}</h1>
+        <form action="#">
+            <span>{% trans 'Ваше имя:' %}</span>
+            <input id="user_name" type="text">
+            <span>{% trans 'Ваш телефон:' %}</span>
+            <input id="user_phone" type="tel">
+            <span>E-mail:</span>
+            <input id="user_email" type="email">
+            <span>{% trans 'Ваши комментарии:' %}</span>
+            <textarea id="user_comment" name="" id="" cols="30" rows="10"></textarea>
+            <button id="button_post" type="submit">{% trans 'Отправить' %}</button>
+        </form>
+    </div>
+</section>
+<section class="head">
+    <div class="cont">
+        <div class="block">
+            <img src="../media/{{state.img_tur}}">
+        </div>
+    </div>
+</section>
+<section class="chertContent">
+    <div class="cont">
+        <div class="block">
+            <div class="BlockBtn">
+                <div>
+                    <h1>{{state.name_tur}}</h1>
+                </div>
+                <div>
+                    <a href="" id="turs_btn_oupen" class="btn1 akti">{% trans 'Описание' %}</a>
+                    {% for item in state.tru_io.all %}
+                    {% if item != "" %}
+                        <a href="" id="turs_btn_clouce" class="btn2">{% trans 'Программа' %}</a>
+                    {% endif %}
+                    {% endfor %}
+                    
+                </div>
+            </div>
+            <div class="BlockContent" id="oupen_tur_block">
+                <div class="left">
+                    <div class="box1">
+                        <p>{{state.how_many_days}} дней / {{state.how_many_nights}} ночей</p>
+                        <p>Цена: {{state.price}}$</p>
+                        <p>Сезон: {{state.season}}</p>
+                    </div>
+                    <div class="box2">
+                        <h2>{% trans 'Описание тура' %}</h2>
+                        <p>
+                            {{state.comment_turs}}
+                        </p>
+                    </div>
+                    <div class="box3 magbot">
+                        <div class="boxText1">
+                            <p><span>{% trans 'Отели:' %}</span> {{state.hotel_name}}</p>
+                            <p>{% trans 'Питание:' %} {{state.hotel_eat}}</p>
+                            <p>{% trans 'Тип номера:' %} {{state.hotel_number}}</p>
+                        </div>
+                        <div class="boxText2">
+                            <p><span>{% trans 'Перелёт:' %}</span> {{state.arrival_city}} - {{state.departure_city}} -
+                                {{state.arrival_city}}</p>
+                        </div>
+                        <div class="boxText3">
+                            <p><span>{% trans 'Включено в стоимость:' %}</span></p>
+                            <ul>
+                                {% for i in state.YesServices.all %}
+                                <li>
+                                    <p>{{i}}</p>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="boxText3">
+                            <p><span>{% trans 'Не включено в стоимость:' %}</span></p>
+                            <ul>
+                                {% for i in state.NoServices.all %}
+                                <li>
+                                    <p>{{i}}</p>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="boxText4">
+                            <p><span>{% trans 'Включение:' %}</span></p>
+                            <p>{{state.adout_comment}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="box_info">
+                        <div>
+                            <p>{% trans 'с человека/' %}</p>
+                            {% if state.price|length > 3 %}
+                            <p style="font-size: 40px">{{state.price}}$</p>
+                            {% else %}
+                            <p>{{state.price}}$</p>
+                            {% endif %}
+                        </div>
+                        <div>
+
+                            <p>{% trans 'на момент' %} {{state.create_day}}</p>
+                        </div>
+                        <div>
+                            <img class="type_tur_img" data-type="{{state.type_turs}}" src="">
+                            
+                        </div>
+                        <div>
+                            <p>{% trans 'Вылет:' %} {{state.departure_day}}</p>
+                        </div>
+                        <div class="marbtn">
+                            
+                            <button class="marbtn2" id="btn_post_turs">{% trans 'Оставить заявку' %}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% include 'turs/program.html' %}
+        </div>
+    </div>
+
+</section>
+
+{% include 'turs/tursContent.html' %}
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'turs/js/turs.js' %}"></script>
+<script src="{% static 'turs/js/tursDescription.js' %}"></script>
+{% endblock %}

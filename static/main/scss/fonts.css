@@ -1,0 +1,149 @@
+/* Kreadon */
+
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/Kreadon-EB.otf");
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/Kreadon-B.otf");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/Kreadon-D.otf");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/Kreadon-M.otf");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/Kreadon-R.otf");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/Kreadon-L.otf");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/Kreadon-EL.otf");
+    font-style: normal;
+    font-weight: 200;
+}
+@font-face {
+    font-family: Kreadon;
+    src: url("../fonts/Kreadon/KreadonVF.ttf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+/* Proxima Nova */
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url("../fonts/Proximanova/proximanova_black.otf");
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: Proxima Nova;
+    src: url("../fonts/Proximanova/proximanova_bold.otf");
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: Proxima Nova;
+    src: url("../fonts/Proximanova/proximanova_light.otf");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: Proxima Nova;
+    src: url("../fonts/Proximanova/proximanova_regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Novecento sans */
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansUltraBold.ttf");
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansBold.ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansDemiBold.ttf");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansMedium.ttf");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansNormal.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansBook.ttf");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansLight.ttf");
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Novecento sans;
+    src: url("../fonts/Novecento/NovecentosansUltraLight.ttf");
+    font-style: normal;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
