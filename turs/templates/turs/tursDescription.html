@@ -55,11 +55,16 @@ turs
                 </div>
                 <div>
                     <a href="" id="turs_btn_oupen" class="btn1 akti">{% trans 'Описание' %}</a>
-                    {% for item in state.tru_io.all %}
-                    {% if item != "" %}
-                        <a href="" id="turs_btn_clouce" class="btn2">{% trans 'Программа' %}</a>
-                    {% endif %}
-                    {% endfor %}
+                    
+                    {% with is_executed=False %}
+                        {% for item in state.tru_io.all %}
+                            {% if item != "" and not is_executed %}
+                                <a href="" id="turs_btn_clouce" class="btn2">{% trans 'Программа' %}</a>
+                                {% with is_executed=True %}
+                                {% endwith %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endwith %}
                     
                 </div>
             </div>
@@ -107,7 +112,7 @@ turs
                             </ul>
                         </div>
                         <div class="boxText4">
-                            <p><span>{% trans 'Включение:' %}</span></p>
+                            <p><span>{% trans 'Примечание:' %}</span></p>
                             <p>{{state.adout_comment}}</p>
                         </div>
                     </div>

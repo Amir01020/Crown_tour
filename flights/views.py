@@ -9,8 +9,9 @@ def index(request):
     
    
 
-    sity = requests.get('https://api.travelpayouts.com/data/ru/cities.json?_gl=1*atmynb*_ga*OTYwMzE2MDA0LjE2OTU1NDkwNzQ.*_ga_1WLL0NEBEH*MTY5NzA5NzY0MC4xNC4wLjE2OTcwOTc2NDAuNjAuMC4w')
-    airline = requests.get('https://api.travelpayouts.com/data/en/airlines.json?_gl=1*10prjgb*_ga*OTYwMzE2MDA0LjE2OTU1NDkwNzQ.*_ga_1WLL0NEBEH*MTY5NzI2MzYzNC4xOC4wLjE2OTcyNjM2MzQuNjAuMC4w')
+    sity = requests.get('https://api.travelpayouts.com/data/ru/cities.json')
+    
+    airline = requests.get('https://api.travelpayouts.com/data/ru/airlines.json')
     sity_new = json.loads(sity.text)
     airline_new = json.loads(airline.text)
    
@@ -91,8 +92,15 @@ def index(request):
         days_back = request.POST.get('replay')
         statrt = post_start
         finesh = post_finesh
+        # Получение текущей даты и времени
+        current_date = datetime.now()
+
+        # Получение года и месяца
+        current_year = current_date.year
+        current_month = current_date.month
+
         # Выполните необходимую обработку данных
-        states = '2023-11'
+        states = f'{current_year}-{current_month}'
         if days_back != '':
             states = days_back
         for i in sity_new:
@@ -101,7 +109,9 @@ def index(request):
                     if item["name"] == finesh:
                         if days != '':
                             tickets = requests.get(f'https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=price&direct=false&currency=uzs&limit=30&page=1&locale=ru&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b')
-                            ticket_arr = json.loads(tickets.text);
+                            print(f'https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=price&direct=false&currency=uzs&limit=30&page=1&locale=ru&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b')
+                            ticket_arr = json.loads(tickets.text)
+                            print(tickets)
                             if ticket_arr['data'] == [] or ticket_arr['data'] == None:
                                 text = {
                                     "text":'Такого билета нет в наличии, выберите другую дату!'
