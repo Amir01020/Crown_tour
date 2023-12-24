@@ -43,13 +43,14 @@
                     <option value="ru">ru</option>
                     <option value="en">en</option>
                 </select>
-            </ul>
-            <ul>
-                <button id="oupen_burger">
+                <button class="burger_btn" id="oupen_burger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
+            </ul>
+            <ul>
+                
             </ul>
         </nav>
         {% include 'main/leng.html' %}
@@ -66,12 +67,7 @@
             <a class="url_a" href="{% url 'visa' %}">{% trans 'Виза' %}</a>
             <div class="sel">
 
-                <select name="" id="translater">
-                        {% get_current_language as LANGUAGE_CODE %}
-                        <option style="display: none;" disabled selected>{{ LANGUAGE_CODE }}</option>
-                        <option value="ru">ru</option>
-                        <option value="en">en</option>
-                    </select>
+                
             </div>
         </div>
     </div>

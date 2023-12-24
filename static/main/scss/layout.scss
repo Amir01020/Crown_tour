@@ -13,21 +13,19 @@ section[data-aos="zoom-out-up"] {
   display: flex;
   justify-content: $s;
   align-items: $a;
-
 }
 
 section {
   scroll-margin-top: 100px;
 }
-.sel{
+.sel {
   margin-top: 20px;
   display: flex;
   justify-content: end;
 }
-#translater{
+#translater {
   font-size: 25px;
-  option{
-
+  option {
   }
 }
 
@@ -52,7 +50,7 @@ section {
       justify-content: space-between;
       align-items: center;
       padding-bottom: 20px;
-      border-bottom: 4px solid #0089D7;
+      border-bottom: 4px solid #0089d7;
 
       img {
         cursor: pointer;
@@ -81,11 +79,10 @@ section {
       &:hover {
         text-decoration: underline;
       }
-
     }
 
     .a_logo {
-      color: #0089D7;
+      color: #0089d7;
       font-family: Kreadon;
       font-size: 29.179px;
       font-style: normal;
@@ -116,9 +113,8 @@ main {
   overflow: hidden;
 }
 
-
 .mytext {
-  color: #0089D7;
+  color: #0089d7;
   font-family: Kreadon;
   font-size: 59.355px;
   font-style: normal;
@@ -131,7 +127,6 @@ main {
 }
 
 header {
-
   nav {
     // justify-content: ;
     @include f(space-between, center);
@@ -139,22 +134,20 @@ header {
     padding: 20px;
     margin: 0 auto;
 
-
     ul {
       &:nth-child(1) {
-        
         a {
-          color: #0089D7;
+          color: #0089d7;
           font-family: Kreadon;
           font-size: 29.179px;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
           text-decoration: none;
-       
+
           white-space: nowrap;
-          
-          .icons{
+
+          .icons {
             width: 40px;
             margin-right: 5px;
           }
@@ -175,7 +168,6 @@ header {
           line-height: 19px;
           letter-spacing: 0em;
           text-align: left;
-
         }
       }
 
@@ -191,13 +183,8 @@ header {
           border: 0;
           outline: none;
         }
-      }
-
-      &:nth-child(4) {
-        display: none;
-
         button {
-          display: flex;
+          display: none;
           flex-direction: column;
           gap: 6px;
           background: none;
@@ -210,7 +197,10 @@ header {
             border: 2px solid #000000;
           }
         }
+      }
 
+      &:nth-child(4) {
+        display: none;
       }
     }
   }
@@ -241,7 +231,7 @@ footer {
       gap: 20px;
 
       p {
-        color: #6B6B6B;
+        color: #6b6b6b;
         font-family: Kreadon;
         font-size: 16px;
         font-style: normal;
@@ -274,13 +264,12 @@ footer {
     font-weight: 800;
   }
 
-  header nav ul:nth-child(2),
-  header nav ul:nth-child(3) {
+  header nav ul:nth-child(2) {
     display: none;
   }
 
-  header nav ul:nth-child(4) {
-    display: block;
+  .burger_btn{
+    display: flex !important;
   }
 
   footer .block .elem p {
@@ -305,7 +294,6 @@ footer {
     }
 
     h1 {
-
       font-size: 30px;
     }
 
@@ -316,7 +304,6 @@ footer {
 
       button {
         height: 40px;
-
       }
     }
   }
@@ -330,7 +317,6 @@ footer {
     }
 
     h1 {
-
       font-size: 30px;
     }
 
@@ -341,7 +327,6 @@ footer {
 
       button {
         height: 40px;
-
       }
     }
   }
@@ -355,7 +340,6 @@ footer {
     }
 
     h1 {
-
       font-size: 30px;
     }
 
@@ -366,7 +350,6 @@ footer {
 
       button {
         height: 40px;
-
       }
     }
   }
@@ -396,7 +379,6 @@ footer {
 
 @media (max-width: 319px) {
 }
-
 
 .sec1 .block .items_1 .my_elem .item .value_active {
   z-index: 4;
