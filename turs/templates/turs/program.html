@@ -14,16 +14,22 @@
         <div class="box2">
             <p><span>{% trans 'План тура' %}</span></p>
         </div>
-        {% for fs in state.tru_io.all %}
-        <div class="box3">
-            <div class="blueBox">
-                <p>{% trans 'День' %} {{fs.day_tur}}</p>
+       
+        
+        {% if state.tru_io != "turs.TourPlan.None" %}
+            
+            {% for fs in state.tru_io.all %}
+                <div class="box3">
+                <div class="blueBox">
+                    <p>{% trans 'День' %} {{fs.day_tur}}</p>
+                </div>
+                <div class="textBox">
+                    <p>{{fs.comment_turs}}</p>
+                </div>
             </div>
-            <div class="textBox">
-                <p>{{fs.comment_turs}}</p>
-            </div>
-        </div>
-        {% endfor %}
+            {% endfor %}
+        {% endif %}
+        
     </div>
     <div class="right">
         <div class="box_info">

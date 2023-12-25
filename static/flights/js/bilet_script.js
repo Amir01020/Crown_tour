@@ -49,7 +49,7 @@ if (arr.dataset.arr !== '') {
     arr_1 = JSON.parse(arr.dataset.arr)
 
 }
-console.log(arr.dataset.arr);
+console.log(JSON.parse(arr.dataset.arr));
 
 
 

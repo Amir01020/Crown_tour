@@ -141,7 +141,7 @@ def index(request):
                                     for line in airline_new:
                                         if ticket['airline'] == line['code']:
                                             ticket['airline'] = line['name']
-                                    if states == '2023-11':
+                                    if states == f'{current_year}-{current_month}':
                                         ticket['back'] = "False"
                                     
                                     

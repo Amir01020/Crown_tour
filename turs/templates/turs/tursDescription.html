@@ -55,16 +55,11 @@ turs
                 </div>
                 <div>
                     <a href="" id="turs_btn_oupen" class="btn1 akti">{% trans 'Описание' %}</a>
-                    
-                    {% with is_executed=False %}
-                        {% for item in state.tru_io.all %}
-                            {% if item != "" and not is_executed %}
-                                <a href="" id="turs_btn_clouce" class="btn2">{% trans 'Программа' %}</a>
-                                {% with is_executed=True %}
-                                {% endwith %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endwith %}
+
+                   
+                  
+                    <a href="" id="turs_btn_clouce" data-prev="{{state.tru_io.all}}" class="btn2">{% trans 'Программа' %}</a>
+               
                     
                 </div>
             </div>

@@ -4,14 +4,19 @@ let turs_btn_oupen = document.querySelector('#turs_btn_oupen')
 let turs_btn_clouce = document.querySelector('#turs_btn_clouce')
 
 
-// turs_btn_clouce.onclick = (event) => {
-//     event.preventDefault()
-//     oupen_tur_block.classList.add('tur_clouce')
-//     clouce_tur_block.classList.remove('tur_clouce')
-//     turs_btn_clouce.classList.add('akti')
-//     turs_btn_oupen.classList.remove('akti')
-//
-// }
+if (turs_btn_clouce.dataset.prev == "<MultilingualQuerySet []>") {
+    turs_btn_clouce.style.display = "none"
+}
+
+
+turs_btn_clouce.onclick = (event) => {
+    event.preventDefault()
+    oupen_tur_block.classList.add('tur_clouce')
+    clouce_tur_block.classList.remove('tur_clouce')
+    turs_btn_clouce.classList.add('akti')
+    turs_btn_oupen.classList.remove('akti')
+
+}
 
 turs_btn_oupen.onclick = (event) => {
     event.preventDefault()
