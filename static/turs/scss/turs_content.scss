@@ -710,6 +710,26 @@
           }
         }
       }
+
+      .mySwiper_2{
+
+        
+        .swip_cont{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: center;
+          .swiper-slide{
+            height: auto;
+            max-width: 453px;
+            
+            .item{
+              width: 100%;
+            }
+            
+          }
+        }
+      }
     }
   }
 

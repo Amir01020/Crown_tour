@@ -65,6 +65,33 @@ def index(request):
             # Если строка короче 5 символов, возвращаем ее без изменений
             return input_string
 
+
+
+    def convert_and_calculate_time(minutes):
+        try:
+            minutes = int(minutes)
+            if minutes < 0:
+                raise ValueError("Время не может быть отрицательным")
+            
+            # Преобразование в часы и минуты
+            hours = minutes // 60
+            remaining_minutes = minutes % 60
+
+            # Вычисление времени в формате 24 часа
+            total_minutes = hours * 60 + remaining_minutes
+            hours_24 = total_minutes // 60 % 24
+            minutes_24 = total_minutes % 60
+
+            return f"{hours_24}:{minutes_24:02d}"
+
+        except ValueError as e:
+            return str(e)
+
+        
+
+
+
+
     def add_spacing(number):
         number_str = str(number)  # Преобразуем число в строку
         reversed_number_str = number_str[::-1]  # Разворачиваем строку
@@ -132,7 +159,7 @@ def index(request):
                                     ticket['departure_at'] =  format_date(ticket['departure_at']).lower()
                                     ticket['return_at'] =  format_date(ticket['return_at']).lower()
                                     ticket['time_to'] = times(times_to)
-                                    ticket['return_to'] = extract_last_5_chars(times_to)
+                                    ticket['return_to'] = convert_and_calculate_time(ticket["duration"])
                                     ticket['time_beck'] = times(times_back)
                                     ticket['price'] = add_spacing(ticket['price'])
                                     ticket['return_beck'] = extract_last_5_chars(times_back)

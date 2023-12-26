@@ -43,35 +43,7 @@ let swiper = new Swiper(".mySwiper_1", {
   }
 
 });
-let swiper_2 = new Swiper(".mySwiper_2", {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    // when window width is >= 1140px
-    1140: {
-      slidesPerView: 3,  // Настройки для больших экранов
-      spaceBetween: 40
-    },
-    // when window width is >= 768px
-    940: {
-      slidesPerView: 1,  // Настройки для средних экранов
-      spaceBetween: 30
-    },
-    768: {
-      slidesPerView: 1,  // Настройки для средних экранов
-      spaceBetween: 30
-    },
-    // when window width is < 768px
-    320: {
-      slidesPerView: 1,  // Настройки для маленьких экранов
-      spaceBetween: 20
-    }
-  }
-});
+
 
 
 

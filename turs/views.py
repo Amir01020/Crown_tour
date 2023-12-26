@@ -31,10 +31,10 @@ class StateDetailView(DetailView):
         current_turs_obj = self.object
 
         # Получаем связанные объекты TourPlan для текущего Turs_obj
-        tru_io_objects = current_turs_obj.tru_io.all()
+        # tru_io_objects = current_turs_obj.tru_io.all()
 
         # Добавляем данные в контекст
-        context['tru_io_objects'] = tru_io_objects
+        context['my_arr'] = Turs_obj.objects.all()
 
         return context
 # class StateDetailView(DetailView):

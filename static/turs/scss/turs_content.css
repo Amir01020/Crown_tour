@@ -586,6 +586,19 @@
   font-weight: 400;
   line-height: normal;
 }
+.bottom .block .items .mySwiper_2 .swip_cont {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.bottom .block .items .mySwiper_2 .swip_cont .swiper-slide {
+  height: auto;
+  max-width: 453px;
+}
+.bottom .block .items .mySwiper_2 .swip_cont .swiper-slide .item {
+  width: 100%;
+}
 
 .tur_clouce {
   display: none !important;
