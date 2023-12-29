@@ -51,7 +51,7 @@ turs
         <div class="block">
             <div class="BlockBtn">
                 <div>
-                    <h1>{{state.name_tur}}</h1>
+                    <h1 data-name="{{state.name_tur}}" data-price="{{state.price}}" id="bot_post">{{state.name_tur}}</h1>
                 </div>
                 <div>
                     <a href="" id="turs_btn_oupen" class="btn1 akti">{% trans 'Описание' %}</a>
@@ -135,7 +135,7 @@ turs
                         </div>
                         <div class="marbtn">
                             
-                            <button class="marbtn2" id="btn_post_turs">{% trans 'Оставить заявку' %}</button>
+                            <button class="marbtn2"  id="btn_post_turs">{% trans 'Оставить заявку' %}</button>
                         </div>
                     </div>
                 </div>
@@ -143,6 +143,8 @@ turs
             {% include 'turs/program.html' %}
         </div>
     </div>
+
+        
 
 </section>
 

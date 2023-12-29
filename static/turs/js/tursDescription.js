@@ -43,9 +43,11 @@ let object = {
 }
 const botToken = '6731210539:AAHCGHoE11aM7KQWvh7ejdDkNNUGI6MhVF0';
 const chatId = '944987837';
+// 944987837
+// myid 1217710274
 // Используем символ новой строки для переноса строки
 
-
+let bot_post = document.querySelector('#bot_post')
 const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
 button_post.onclick = (event) => {
     event.preventDefault()
@@ -57,13 +59,12 @@ button_post.onclick = (event) => {
     ) {
         alert('error')
     } else {
-        const message = `Имя: ${user_name.value}\nНомер: ${user_phone.value}\nGmail: ${user_email.value}\nКоментарий: ${user_comment.value}`;
+        const message = `Название тура: ${bot_post.dataset.name}\nСтоимость тура:${bot_post.dataset.price}$\nИмя: ${user_name.value}\nНомер: ${user_phone.value}\nGmail: ${user_email.value}\nКоментарий: ${user_comment.value}`;
         const params = {
             chat_id: chatId,
             text: message,
             parse_mode: 'Markdown', // Указываем, что текст содержит разметку Markdown
         };
-
         // Выполнение HTTP-запроса с помощью Axios
         axios.post(apiUrl, params)
             .then(response => {
@@ -78,12 +79,5 @@ button_post.onclick = (event) => {
         setTimeout(() => {
             modal_tur.style.opacity = '1'
         }, 300);
-
     }
-
-
 }
-
-
-
-
