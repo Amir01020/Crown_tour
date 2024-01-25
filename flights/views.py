@@ -35,7 +35,7 @@ def index(request):
 
     def format_time(minutes):
         if minutes < 60:
-            formatted_time = f"{minutes}мин"
+            formatted_time = f"{minutes}"
         else:
             hours = minutes // 60
             remaining_minutes = minutes % 60
@@ -178,7 +178,7 @@ def index(request):
                                     times_to = ticket['departure_at']  
                                     times_back = ticket['return_at']
                                     bac_time = time_to_minutes(times(times_to))
-                                    bac_time = bac_time +  ticket["duration"]
+                                    bac_time = bac_time +  ticket["duration_to"]
                                     # print(ticket['departure_at'])
                                     ticket['departure_at_new'] = times_to
                                     ticket['back'] = 'True'
