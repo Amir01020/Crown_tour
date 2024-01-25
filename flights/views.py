@@ -127,7 +127,7 @@ def index(request):
         current_month = current_date.month
 
         current_month = str(current_month)
-        print(len(current_month))
+       
         if len(current_month) <2:
             current_month = f'0{current_month}'
 
@@ -179,6 +179,10 @@ def index(request):
                                     times_back = ticket['return_at']
                                     bac_time = time_to_minutes(times(times_to))
                                     bac_time = bac_time +  ticket["duration_to"]
+                                    return_bac_time =time_to_minutes(times(times_back))
+                                    
+                                    return_bac_time = return_bac_time +  ticket["duration_to"]
+                                    print(minutes_to_time(return_bac_time))
                                     # print(ticket['departure_at'])
                                     ticket['departure_at_new'] = times_to
                                     ticket['back'] = 'True'
@@ -188,9 +192,9 @@ def index(request):
                                     ticket['return_to'] = minutes_to_time(bac_time)
                                     ticket['time_beck'] = times(times_back)
                                     ticket['price'] = add_spacing(ticket['price'])
-                                    ticket['return_beck'] = extract_last_5_chars(times_back)
+                                    ticket['return_beck'] =  minutes_to_time(return_bac_time)
                                     ticket['duration_to'] =  format_time(ticket['duration_to']).lower() 
-                                    ticket['duration_back'] =  format_time(ticket['duration_back']).lower() 
+                                    ticket['duration_back'] = format_time(ticket['duration_back']).lower() 
                                     for line in airline_new:
                                         if ticket['airline'] == line['code']:
                                             ticket['airline'] = line['name']
