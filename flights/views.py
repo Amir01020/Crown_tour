@@ -126,8 +126,29 @@ def index(request):
         current_year = current_date.year
         current_month = current_date.month
 
+        current_month = str(current_month)
+        print(len(current_month))
+        if len(current_month) <2:
+            current_month = f'0{current_month}'
+
         # Выполните необходимую обработку данных
         states = f'{current_year}-{current_month}'
+        # функция для перевода чясов в минуты 
+        def time_to_minutes(time_str):
+    
+            hours, minutes = map(int, time_str.split(':'))
+            total_minutes = hours * 60 + minutes
+            return total_minutes
+        def minutes_to_time(total_minutes):
+            if 0 <= total_minutes < 1440:  # Убеждаемся, что в пределах 24 часов
+                hours = total_minutes // 60
+                minutes = total_minutes % 60
+                return f"{hours:02d}:{minutes:02d}"
+            else:
+                print("Ошибка: Некорректное количество минут")  
+        
+        
+
         if days_back != '':
             states = days_back
         for i in sity_new:
@@ -139,6 +160,7 @@ def index(request):
                             print(f'https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=price&direct=false&currency=uzs&limit=30&page=1&locale=ru&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b')
                             ticket_arr = json.loads(tickets.text)
                             print(tickets)
+                            
                             if ticket_arr['data'] == [] or ticket_arr['data'] == None:
                                 text = {
                                     "text":'Такого билета нет в наличии, выберите другую дату!'
@@ -151,15 +173,19 @@ def index(request):
                                 text = {
                                     "text":''
                                 }
+                                
                                 for ticket in ticket_arr['data']:
                                     times_to = ticket['departure_at']  
                                     times_back = ticket['return_at']
+                                    bac_time = time_to_minutes(times(times_to))
+                                    bac_time = bac_time +  ticket["duration"]
+                                    # print(ticket['departure_at'])
                                     ticket['departure_at_new'] = times_to
                                     ticket['back'] = 'True'
                                     ticket['departure_at'] =  format_date(ticket['departure_at']).lower()
                                     ticket['return_at'] =  format_date(ticket['return_at']).lower()
                                     ticket['time_to'] = times(times_to)
-                                    ticket['return_to'] = convert_and_calculate_time(ticket["duration"])
+                                    ticket['return_to'] = minutes_to_time(bac_time)
                                     ticket['time_beck'] = times(times_back)
                                     ticket['price'] = add_spacing(ticket['price'])
                                     ticket['return_beck'] = extract_last_5_chars(times_back)

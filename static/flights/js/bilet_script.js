@@ -1,5 +1,5 @@
 let arr = document.querySelector('#block_right')
-
+console.log();
 let sity = JSON.parse(arr.dataset.sity)
 let citiesNames = sity.map(city => city.name)
 let sity_value = document.querySelectorAll('.sity_value')
