@@ -57,7 +57,7 @@ flights
                 
             </div>
         </div>
-        <div class="block_sec3">
+        <!-- <div class="block_sec3">
             <p class="text">{% trans 'Длительность пересадок' %}</p>
             <div class="btn_active" id="duration_btn">
                 <p class="block_sec3_text">{% trans 'До Зч' %}</p>
@@ -65,7 +65,7 @@ flights
                     <circle cx="12.7163" cy="12.5005" r="12.4321" fill="#FDFDFD" />
                 </svg>
             </div>
-        </div>
+        </div> -->
         <div class="block_sec4">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                 <circle cx="12.4321" cy="12.4321" r="12.4321" fill="#0089D7" />
@@ -108,7 +108,7 @@ flights
                 <div class="items_1" id="filter_sity" data-sity="{{my_sity_arr}}">
                     <div class="my_elem">
                         <div class="item">
-                            <input type="text" required placeholder="{% trans 'Откуда' %}" name="statrt" class="sity_value">
+                            <input type="text" required placeholder="{% trans 'Откуда' %}" value="{{statrt}}" name="statrt" class="sity_value">
                             <div class="value" id="text_sity_value">
                                 <p>{% trans 'text' %}</p>
                                 <p>{% trans 'text' %}</p>
@@ -133,18 +133,18 @@ flights
                         </div>
                         <div class="item">
                             <span></span>
-                            <input type="text" required placeholder="{% trans 'Куда' %}" name="finesh" class="sity_value">
-        
+                            <input type="text" required placeholder="{% trans 'Куда' %}" value="{{finesh}}" name="finesh" class="sity_value">
+                            <!-- <h1>{{finesh}}</h1> -->
                         </div>
                     </div>
                     <div class="my_elem">
                         <div class="item">
                             <span class="ttttttttt"></span>
-                            <input type="date" required placeholder="{% trans 'Когда' %}" name="day">
+                            <input type="date" required placeholder="{% trans 'Когда' %}" value="{{days}}" name="day">
                         </div>
                         <div class="item">
                             <span></span>
-                            <input type="date" placeholder="{% trans 'Обратно' %}" name="replay" id="">
+                            <input type="date" placeholder="{% trans 'Обратно' %}" value="{{days_back}}" name="replay" id="">
         
                         </div>
                     </div>
@@ -232,7 +232,7 @@ flights
                         
                     </div>
                 </div>
-                <div class="block_sec3">
+                <!-- <div class="block_sec3">
                     <p class="text">{% trans 'Длительность пересадок' %}</p>
                     <div class="btn_active" id="duration_btn">
                         <p class="block_sec3_text">{% trans 'До Зч' %}</p>
@@ -240,8 +240,8 @@ flights
                             <circle cx="12.7163" cy="12.5005" r="12.4321" fill="#FDFDFD" />
                         </svg>
                     </div>
-                </div>
-                <div class="block_sec4">
+                </div> -->
+                <!-- <div class="block_sec4">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                         <circle cx="12.4321" cy="12.4321" r="12.4321" fill="#0089D7" />
                         <circle cx="12.5" cy="12.5" r="9.5" fill="#FDFDFD" />
@@ -254,7 +254,7 @@ flights
                     <div class="num1">4</div>
                     <div class="num2">8</div>
                     <div class="num3">12</div>
-                </div>
+                </div> -->
                 <div class="block_sec5">
                     <p>{% trans 'Если комфорт важнее' %}</p>
                 </div>
@@ -266,33 +266,32 @@ flights
                             <div class="switch-btn"></div>
                         </div>
                     </div>
-                    <div class="bl_0 block_sec6_2">
+                    <!-- <div class="bl_0 block_sec6_2">
                         <p>{% trans 'Без ночных пересадок' %}</p>
                         <div>
                             <div class="switch-btn "></div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="block_right" id="block_right" data-sity="{{sity}}" data-arr="{{text}}">
               
-                <h2 class="error">{{texts.text}}</h2>
+                <h2 class="error" id="error">{{texts.text}}</h2>
                
                 
                 {% for i in arr.data %}
+
+                {% if i.return_beck != null and i.return_to != null %}
+                    
                 <div class="item" id="items_ticket" data-transfers="{{i.transfers}}" data-aos="fade-in" data-destination="{{i.destination}}" data-origin="{{i.origin}}">
                     <div class="elem">
                         <h3 style="font-size: 28px;">{{i.price}} UZS</h3>
-                        <div class="dopPrice">
-                            <p>{% trans 'Багаж' %} <span>+ 62 000 UZS</span></p>
-                            <div class="checet ">
-                                <div class="chek"></div>
-                            </div>
-                        </div>
+                        <h5><img src="{{i.airline_logo}}" alt="">{{i.airline}}</h5>
                         <a href="https://www.aviasales.uz{{i.link}}">{% trans 'Выбрать' %}</a>
                     </div>
                     <div class="elem">
                         <div class="logo_compani">
+                            
                             <h5>{{i.airline}}</h5>
                         </div>
                         <div class="this_element qq">
@@ -326,7 +325,7 @@ flights
                                 <p>{{i.return_at}}</p>
                             </div>
                             <div class="my_elem">
-                                <p>{% trans 'В пути:' %} <span>{{i.duration_to}}мин</span></p>
+                                <p>{% trans 'В пути:' %} <span>{{i.duration_back}}мин</span></p>
                                 <div class="liyn"></div>
                                 <div class="box">
                                     <p>AUH</p>
@@ -344,6 +343,13 @@ flights
                         
                     </div>
                 </div>
+
+           
+                    
+               
+
+                {% endif %}
+
                 {% endfor %}
 
 

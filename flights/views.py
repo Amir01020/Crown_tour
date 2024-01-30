@@ -40,7 +40,7 @@ def index(request):
             hours = minutes // 60
             remaining_minutes = minutes % 60
             if remaining_minutes > 0:
-                formatted_time = f"{hours}ч {remaining_minutes}мин"
+                formatted_time = f"{hours}ч {remaining_minutes}"
             else:
                 formatted_time = f"{hours}ч"
 
@@ -129,7 +129,7 @@ def index(request):
         current_month = str(current_month)
        
         if len(current_month) <2:
-            current_month = f'0{current_month}'
+            current_month = f'02'
 
         # Выполните необходимую обработку данных
         states = f'{current_year}-{current_month}'
@@ -156,19 +156,21 @@ def index(request):
                 for item in sity_new:
                     if item["name"] == finesh:
                         if days != '':
-                            tickets = requests.get(f'https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=price&direct=false&currency=uzs&limit=30&page=1&locale=ru&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b')
+                            my_url_api = f"https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=route&direct=false&currency=uzs&limit=30&page=1&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b"
+                            tickets = requests.get(my_url_api)
                             print(f'https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=price&direct=false&currency=uzs&limit=30&page=1&locale=ru&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b')
                             ticket_arr = json.loads(tickets.text)
                             print(tickets)
                             
                             if ticket_arr['data'] == [] or ticket_arr['data'] == None:
                                 text = {
-                                    "text":'Такого билета нет в наличии, выберите другую дату!'
+                                    "text":'Такого билета нет в наличии, выберите другую дату!',
+                                    
                                 }
                                 
                                 
 
-                                return render(request, 'flights/index.html', {"sity":sity.text,'arr': ticket_arr,"text":json.dumps(ticket_arr),'texts':text})
+                                return render(request, 'flights/index.html', {"sity":sity.text,"statrt":statrt,"finesh":finesh,"days":days,"days_back":days_back,'arr': ticket_arr,"text":json.dumps(ticket_arr),'texts':text})
                             else:
                                 text = {
                                     "text":''
@@ -181,7 +183,7 @@ def index(request):
                                     bac_time = bac_time +  ticket["duration_to"]
                                     return_bac_time =time_to_minutes(times(times_back))
                                     
-                                    return_bac_time = return_bac_time +  ticket["duration_to"]
+                                    return_bac_time = return_bac_time +  ticket["duration_back"]
                                     print(minutes_to_time(return_bac_time))
                                     # print(ticket['departure_at'])
                                     ticket['departure_at_new'] = times_to
@@ -196,6 +198,7 @@ def index(request):
                                     ticket['duration_to'] =  format_time(ticket['duration_to']).lower() 
                                     ticket['duration_back'] = format_time(ticket['duration_back']).lower() 
                                     for line in airline_new:
+                                        ticket["airline_logo"] = f"http://pics.avs.io/200/200/{line['code']}.png"
                                         if ticket['airline'] == line['code']:
                                             ticket['airline'] = line['name']
                                     if states == f'{current_year}-{current_month}':
@@ -208,14 +211,25 @@ def index(request):
                                                 item['destination'] = i['name']
                                         if item['origin'] == i['code']:
                                                 item['origin'] = i['name']
-                                return render(request, 'flights/index.html', {"sity":sity.text,'arr': ticket_arr,"text":json.dumps(ticket_arr)})
+                                # print(statrt)
+
+                                return render(request, 'flights/index.html', {"sity":sity.text,"statrt":statrt,"finesh":finesh,"days":days,"days_back":days_back,'arr': ticket_arr,"text":json.dumps(ticket_arr)})
                             
                         
     else:
-         return render(request, 'flights/index.html',{"sity":sity.text}  )  
+        #  print(statrt)
+        post_start = request.POST.get('statrt')
+        post_finesh = request.POST.get('finesh')
+        days = request.POST.get('day')
+        days_back = request.POST.get('replay')
+        statrt = post_start
+        finesh = post_finesh
+        print(statrt)
+        return render(request, 'flights/index.html',{"sity":sity.text,"statrt":statrt,"finesh":finesh,"days":days,"days_back":days_back}  )  
     
 # , {"my_sity_arr":new_sity,'arr': new_arr,"text":json.dumps(new_arr),"city":resp.text}
 
        
+    # print(statrt)
 
-    return render(request, 'flights/index.html',{"sity":sity.text} )   
+    # return render(request, 'flights/index.html',{"sity":sity.text,"statrt":statrt,"finesh":finesh,"days":days,"days_back":days_back} )   
