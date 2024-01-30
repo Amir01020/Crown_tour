@@ -127,10 +127,15 @@ def index(request):
         current_month = current_date.month
 
         current_month = str(current_month)
-       
-        if len(current_month) <2:
-            current_month = f'02'
-
+        def extract_month(date_string):
+            # Преобразование строки в объект datetime
+            date_object = datetime.strptime(date_string, "%Y-%m-%d")
+            # Извлечение месяца в виде строки с ведущим нулем
+            month = date_object.strftime("%m")
+            return month
+        
+        current_month = extract_month(days)
+        # print(days)
         # Выполните необходимую обработку данных
         states = f'{current_year}-{current_month}'
         # функция для перевода чясов в минуты 
