@@ -161,7 +161,7 @@ def index(request):
                 for item in sity_new:
                     if item["name"] == finesh:
                         if days != '':
-                            my_url_api = f"https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=route&direct=false&currency=uzs&limit=30&page=1&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b"
+                            my_url_api = f"https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i['code']}&destination={item['code']}&departure_at={days}&return_at={states}&unique=false&sorting=route&direct=false&currency=uzs&limit=30&page=1&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b"
                             tickets = requests.get(my_url_api)
                             print(f'https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin={i["code"]}&destination={item["code"]}&departure_at={days}&return_at={states}&unique=false&sorting=price&direct=false&currency=uzs&limit=30&page=1&locale=ru&one_way=true&token=10d9c916fc91e02b03c8e34de1b9bb3b')
                             ticket_arr = json.loads(tickets.text)
@@ -230,7 +230,7 @@ def index(request):
         statrt = post_start
         finesh = post_finesh
         print(statrt)
-        return render(request, 'flights/index.html',{"sity":sity.text,"statrt":statrt,"finesh":finesh,"days":days,"days_back":days_back}  )  
+        return render(request, 'flights/index.html',{"sity":sity.text}  )  
     
 # , {"my_sity_arr":new_sity,'arr': new_arr,"text":json.dumps(new_arr),"city":resp.text}
 
